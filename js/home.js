@@ -11,7 +11,8 @@
         contactForm: "[data-contact-form]"
     };
 
-    let lastFocusedElement = null;
+  let lastFocusedElement = null;
+  let testimonialsSwiper = null;
 
     document.addEventListener("DOMContentLoaded", function () {
         applyPageMeta();
@@ -28,7 +29,8 @@
         initPolicyBanner();
         initContactForms();
         initSmoothAnchors();
-        initLucideIcons();
+      initLucideIcons();
+      initTestimonialsSwiper();
 
         window.addEventListener("load", function () {
             document.body.classList.remove("is-loading");
@@ -996,34 +998,74 @@
       .join("");
   }
 
-    function injectTestimonials(data) {
-        if (!data) return;
+  function injectTestimonials(data) {
+    if (!data) return;
 
-        setText("[data-testimonials-eyebrow]", data.eyebrow);
-        setText("[data-testimonials-title]", data.title);
+    setText("[data-testimonials-eyebrow]", data.eyebrow);
+    setText("[data-testimonials-title]", data.title);
 
-        const mount = document.querySelector("[data-testimonial-cards]");
-        if (!mount || !Array.isArray(data.items)) return;
+    const mount = document.querySelector("[data-testimonial-cards]");
+    if (!mount || !Array.isArray(data.items)) return;
 
-        mount.innerHTML = data.items
-            .map(function (item) {
-                return `
-          <article class="testimonial-card glass-card hover-card">
-            <div class="testimonial-card__avatar">
-              ${createIcon("user-round")}
-            </div>
+    mount.innerHTML = data.items
+      .map(function (item) {
+        return `
+                <article class="testimonial-card glass-card hover-card swiper-slide">
+                    <div class="testimonial-card__avatar">
+                        ${createIcon("user-round")}
+                    </div>
 
-            <p>“${item.text}”</p>
+                    <p>“${item.text}”</p>
 
-            <div>
-              <strong>${item.name}</strong>
-              <span>${item.role}</span>
-            </div>
-          </article>
-        `;
-            })
-            .join("");
+                    <div>
+                        <strong>${item.name}</strong>
+                        <span>${item.role}</span>
+                    </div>
+                </article>
+            `;
+      })
+      .join("");
+  }
+
+  function initTestimonialsSwiper() {
+    const slider = document.querySelector("[data-testimonials-swiper]");
+    if (!slider || typeof Swiper === "undefined") return;
+
+    if (testimonialsSwiper) {
+      testimonialsSwiper.destroy(true, true);
     }
+
+    testimonialsSwiper = new Swiper(slider, {
+      loop: true,
+      speed: 650,
+      spaceBetween: 18,
+      grabCursor: true,
+      watchOverflow: false,
+
+      pagination: {
+        el: "[data-testimonials-pagination]",
+        clickable: true
+      },
+
+      navigation: {
+        nextEl: "[data-testimonials-next]",
+        prevEl: "[data-testimonials-prev]"
+      },
+
+      slidesPerView: 1,
+
+      breakpoints: {
+        760: {
+          slidesPerView: 2,
+          spaceBetween: 18
+        },
+        1120: {
+          slidesPerView: 3,
+          spaceBetween: 18
+        }
+      }
+    });
+  }
 
     function injectContactIntro(data) {
         if (!data) return;

@@ -383,22 +383,39 @@ window.SITE_CONFIG = {
             title: "What businesses value about organized digital marketing.",
             items: [
                 {
+                    text: "RKJ helped us organize our digital campaigns and understand which channels were bringing better-quality traffic.",
                     name: "Sarah Thompson",
-                    role: "Local Service Business",
-                    text:
-                        "RKJ helped us organize our digital campaigns and understand which channels were bringing better-quality traffic."
+                    role: "Local Service Business"
                 },
                 {
-                    name: "Michael Chen",
-                    role: "E-commerce Manager",
-                    text:
-                        "The strategy felt clearer and more structured. We could see how paid ads, landing pages, and reporting connected."
+                    text: "The team brought structure to our paid ads and landing page direction. Everything became easier to understand and manage.",
+                    name: "Daniel Morris",
+                    role: "Service Company Owner"
                 },
                 {
-                    name: "Ryan Miller",
-                    role: "Independent Business Owner",
-                    text:
-                        "The website and campaign direction became easier to understand, and the monthly optimization process felt more focused."
+                    text: "We needed clearer SEO planning and better website messaging. RKJ gave us a practical direction without overcomplicating the process.",
+                    name: "Emily Carter",
+                    role: "Operations Manager"
+                },
+                {
+                    text: "Our social media and website strategy finally started working together instead of feeling like separate tasks.",
+                    name: "Michael Evans",
+                    role: "Small Business Founder"
+                },
+                {
+                    text: "RKJ helped us see where leads were coming from and where our campaign budget needed more control.",
+                    name: "Laura Bennett",
+                    role: "Marketing Coordinator"
+                },
+                {
+                    text: "The work felt organized, clear, and focused on business goals rather than random marketing activity.",
+                    name: "James Walker",
+                    role: "Growth-Focused Business"
+                },
+                {
+                    text: "We appreciated the clear communication, campaign structure, and practical recommendations for improving customer action.",
+                    name: "Natalie Brooks",
+                    role: "Professional Services"
                 }
             ]
         },

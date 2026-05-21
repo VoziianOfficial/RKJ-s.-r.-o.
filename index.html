@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body class="is-loading">
@@ -348,34 +349,53 @@
             </div>
         </section>
 
-            <!-- 09. Client feedback / reviews -->
-            <section class="testimonials-section section" aria-labelledby="testimonials-title">
-                <div class="container">
-                    <div class="section-heading section-heading--center">
-                        <span class="section-kicker" data-testimonials-eyebrow>Client Feedback & Reviews</span>
+<!-- 09. Client feedback / reviews -->
+<section class="testimonials-section section" aria-labelledby="testimonials-title">
+    <div class="container-wide">
+        <div class="section-heading section-heading--center">
+            <span class="section-kicker" data-testimonials-eyebrow>Client Feedback & Reviews</span>
 
-                        <h2 id="testimonials-title" data-testimonials-title>
-                            What businesses value about organized digital marketing.
-                        </h2>
-                    </div>
+            <h2 id="testimonials-title" data-testimonials-title>
+                What businesses value about organized digital marketing.
+            </h2>
+        </div>
 
-                    <div class="testimonials-section__grid" data-testimonial-cards>
-                        <article class="testimonial-card glass-card hover-card">
-                            <div class="testimonial-card__avatar">
-                                <i data-lucide="user-round" aria-hidden="true"></i>
-                            </div>
+        <div class="testimonials-slider">
+            <div class="testimonials-swiper swiper" data-testimonials-swiper>
+                <div class="swiper-wrapper" data-testimonial-cards>
+                    <article class="testimonial-card glass-card hover-card swiper-slide">
+                        <div class="testimonial-card__avatar">
+                            <i data-lucide="user-round" aria-hidden="true"></i>
+                        </div>
 
-                            <p>“RKJ helped us organize our digital campaigns and understand which channels were bringing
-                                better-quality traffic.”</p>
+                        <p>
+                            “RKJ helped us organize our digital campaigns and understand which channels were bringing
+                            better-quality traffic.”
+                        </p>
 
-                            <div>
-                                <strong>Sarah Thompson</strong>
-                                <span>Local Service Business</span>
-                            </div>
-                        </article>
-                    </div>
+                        <div>
+                            <strong>Sarah Thompson</strong>
+                            <span>Local Service Business</span>
+                        </div>
+                    </article>
                 </div>
-            </section>
+            </div>
+
+            <div class="testimonials-controls" aria-label="Testimonials slider controls">
+                <button class="testimonials-arrow" type="button" aria-label="Previous testimonial"
+                    data-testimonials-prev>
+                    <i data-lucide="arrow-left" aria-hidden="true"></i>
+                </button>
+
+                <div class="testimonials-pagination" data-testimonials-pagination></div>
+
+                <button class="testimonials-arrow" type="button" aria-label="Next testimonial" data-testimonials-next>
+                    <i data-lucide="arrow-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
 
             <!-- 10. Contact / small proposal form -->
             <section class="contact-section section" id="contact" aria-labelledby="contact-title">
@@ -469,6 +489,7 @@
 
     <script src="https://unpkg.com/lucide@latest" defer></script>
     <script src="./js/config.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="./js/home.js" defer></script>
 </body>
 
