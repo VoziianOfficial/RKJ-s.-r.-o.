@@ -254,7 +254,7 @@ window.SITE_CONFIG = {
                 "Google Ads Strategy",
                 "SEO Growth Planning",
                 "Social Media Campaigns",
-                "Conversion-Focused Web Design",
+                "Conversion Web Design",
                 "Local Search Visibility",
                 "Transparent Reporting",
                 "Audience & Keyword Research",

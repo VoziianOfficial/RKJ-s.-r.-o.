@@ -849,103 +849,113 @@
         }
     }
 
-    function injectServicesPreview() {
-        const mount = document.querySelector("[data-services-preview]");
-        if (!mount) return;
+  function injectServicesPreview() {
+    const mount = document.querySelector("[data-services-preview]");
+    if (!mount) return;
 
-        const services = Array.isArray(config.services) ? config.services : [];
+    const services = Array.isArray(config.services) ? config.services : [];
 
-        mount.innerHTML = services
-            .map(function (service) {
-                const bullets = Array.isArray(service.bullets) ? service.bullets : [];
+    mount.innerHTML = services
+      .map(function (service, index) {
+        const bullets = Array.isArray(service.bullets) ? service.bullets : [];
 
-                return `
-          <article class="service-preview-card glass-card hover-card">
-            <div class="service-preview-card__top">
-              <span class="icon-badge">
-                ${createIcon(service.icon || "sparkles")}
-              </span>
-              <span class="service-preview-card__index">${service.shortTitle || service.title}</span>
-            </div>
+        return `
+                <a class="service-preview-card glass-card hover-card"
+                   href="${service.href}"
+                   aria-label="Open ${service.title} service page"
+                   style="--service-card-index: '${String(index + 1).padStart(2, "0")}';">
+                    <div class="service-preview-card__top">
+                        <span class="icon-badge">
+                            ${createIcon(service.icon || "sparkles")}
+                        </span>
+                        <span class="service-preview-card__index">${service.shortTitle || service.title}</span>
+                    </div>
 
-            <h3>${service.title}</h3>
-            <p>${service.summary || ""}</p>
+                    <h3>${service.title}</h3>
+                    <p>${service.summary || ""}</p>
 
-            <ul>
-              ${bullets
-                        .map(function (bullet) {
-                            return `
-                    <li>
-                      ${createIcon("check")}
-                      <span>${bullet}</span>
-                    </li>
-                  `;
-                        })
-                        .join("")}
-            </ul>
-
-            <a class="service-preview-card__link" href="${service.href}">
-              <span>Learn More</span>
-              ${createIcon("arrow-up-right")}
-            </a>
-          </article>
-        `;
+                    <ul>
+                        ${bullets
+            .map(function (bullet) {
+              return `
+                                    <li>
+                                        ${createIcon("check")}
+                                        <span>${bullet}</span>
+                                    </li>
+                                `;
             })
-            .join("");
-    }
+            .join("")}
+                    </ul>
 
-    function injectWhyChoose(data) {
-        if (!data) return;
+                    <span class="service-preview-card__link">
+                        <span>Learn More</span>
+                        ${createIcon("arrow-up-right")}
+                    </span>
+                </a>
+            `;
+      })
+      .join("");
+  }
 
-        setText("[data-why-eyebrow]", data.eyebrow);
-        setText("[data-why-title]", data.title);
-        setText("[data-why-text]", data.text);
+  function injectWhyChoose(data) {
+    if (!data) return;
 
-        const mount = document.querySelector("[data-why-items]");
-        if (!mount || !Array.isArray(data.items)) return;
+    setText("[data-why-eyebrow]", data.eyebrow);
+    setText("[data-why-title]", data.title);
+    setText("[data-why-text]", data.text);
 
-        mount.innerHTML = data.items
-            .map(function (item, index) {
-                return `
-          <article class="why-card glass-card hover-card">
-            <span class="why-card__number">${String(index + 1).padStart(2, "0")}</span>
-            <span class="icon-badge">
-              ${createIcon(item.icon || "sparkles")}
-            </span>
-            <h3>${item.title}</h3>
-            <p>${item.text}</p>
-          </article>
-        `;
-            })
-            .join("");
-    }
+    const mount = document.querySelector("[data-why-items]");
+    if (!mount || !Array.isArray(data.items)) return;
 
-    function injectProcess(data) {
-        if (!data) return;
+    mount.innerHTML = data.items
+      .map(function (item, index) {
+        return `
+                <article class="why-card">
+                    <span class="why-card__number">${String(index + 1).padStart(2, "0")}</span>
 
-        setText("[data-process-eyebrow]", data.eyebrow);
-        setText("[data-process-title]", data.title);
+                    <span class="icon-badge">
+                        ${createIcon(item.icon || "sparkles")}
+                    </span>
 
-        const mount = document.querySelector("[data-process-steps]");
-        if (!mount || !Array.isArray(data.steps)) return;
+                    <div class="why-card__content">
+                        <h3>${item.title}</h3>
+                        <p>${item.text}</p>
+                    </div>
+                </article>
+            `;
+      })
+      .join("");
+  }
 
-        mount.innerHTML = data.steps
-            .map(function (step) {
-                return `
-          <article class="process-step glass-card hover-card">
-            <div class="process-step__icon">
-              ${createIcon(step.icon || "circle")}
-            </div>
+  function injectProcess(data) {
+    if (!data) return;
 
-            <span class="process-step__number">${step.number}</span>
-            <h3>${step.title}</h3>
-            <p>${step.text}</p>
-            <small>${step.label}</small>
-          </article>
-        `;
-            })
-            .join("");
-    }
+    setText("[data-process-eyebrow]", data.eyebrow);
+    setText("[data-process-title]", data.title);
+
+    const mount = document.querySelector("[data-process-steps]");
+    if (!mount || !Array.isArray(data.steps)) return;
+
+    mount.innerHTML = data.steps
+      .map(function (step) {
+        return `
+                <article class="process-step">
+                    <div class="process-step__icon">
+                        ${createIcon(step.icon || "circle")}
+                    </div>
+
+                    <span class="process-step__number">${step.number}</span>
+
+                    <div class="process-step__content">
+                        <h3>${step.title}</h3>
+                        <p>${step.text}</p>
+                        <small>${step.label}</small>
+                    </div>
+                </article>
+            `;
+      })
+      .join("");
+  }
 
     function injectAdvantage(data) {
         if (!data) return;
@@ -959,29 +969,32 @@
         });
     }
 
-    function injectCampaignFeatures(data) {
-        if (!data) return;
+  function injectCampaignFeatures(data) {
+    if (!data) return;
 
-        setText("[data-campaign-eyebrow]", data.eyebrow);
-        setText("[data-campaign-title]", data.title);
-        setText("[data-campaign-text]", data.text);
+    setText("[data-campaign-eyebrow]", data.eyebrow);
+    setText("[data-campaign-title]", data.title);
+    setText("[data-campaign-text]", data.text);
 
-        const mount = document.querySelector("[data-campaign-items]");
-        if (!mount || !Array.isArray(data.items)) return;
+    const mount = document.querySelector("[data-campaign-items]");
+    if (!mount || !Array.isArray(data.items)) return;
 
-        mount.innerHTML = data.items
-            .map(function (item) {
-                return `
-          <article class="campaign-feature glass-card hover-card">
-            <span>
-              ${createIcon(item.icon || "sparkles")}
-            </span>
-            <h3>${item.title}</h3>
-          </article>
-        `;
-            })
-            .join("");
-    }
+    mount.innerHTML = data.items
+      .map(function (item, index) {
+        return `
+                <article class="campaign-feature">
+                    <span class="campaign-feature__number">${String(index + 1).padStart(2, "0")}</span>
+
+                    <span class="campaign-feature__icon">
+                        ${createIcon(item.icon || "sparkles")}
+                    </span>
+
+                    <h3>${item.title}</h3>
+                </article>
+            `;
+      })
+      .join("");
+  }
 
     function injectTestimonials(data) {
         if (!data) return;
