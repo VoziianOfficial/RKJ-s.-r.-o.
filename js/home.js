@@ -38,9 +38,7 @@
         });
     });
 
-    /* ==================================================
-       Helpers
-       ================================================== */
+    
 
     function getCurrentPage() {
         const path = window.location.pathname;
@@ -91,9 +89,7 @@
         });
     }
 
-    /* ==================================================
-       Meta
-       ================================================== */
+    
 
     function applyPageMeta() {
         const currentPage = getCurrentPage();
@@ -118,9 +114,7 @@
         }
     }
 
-    /* ==================================================
-       Logo
-       ================================================== */
+    
 
     function createLogoMarkup() {
         const brandName = safeText(config.brandName, "RKJ");
@@ -140,9 +134,7 @@
     `;
     }
 
-    /* ==================================================
-       Header
-       ================================================== */
+    
 
     function renderSiteHeader() {
         const mount = document.querySelector(selectors.headerMount);
@@ -292,9 +284,7 @@
         });
     }
 
-    /* ==================================================
-       Mobile Menu
-       ================================================== */
+    
 
     function renderMobileMenu() {
         const mount = document.querySelector(selectors.mobileMenuMount);
@@ -516,9 +506,7 @@
         });
     }
 
-    /* ==================================================
-       Footer
-       ================================================== */
+    
 
     function renderSiteFooter() {
         const mount = document.querySelector(selectors.footerMount);
@@ -637,9 +625,7 @@
     `;
     }
 
-    /* ==================================================
-       Cookie / Policy Banner
-       ================================================== */
+    
 
     function renderPolicyBanner() {
         const mount = document.querySelector(selectors.policyBannerMount);
@@ -705,9 +691,7 @@
         });
     }
 
-    /* ==================================================
-       Global Data Injection
-       ================================================== */
+    
 
     function injectGlobalData() {
         const globalTextMap = [
@@ -761,9 +745,7 @@
         }
     }
 
-    /* ==================================================
-       Homepage Data Injection
-       ================================================== */
+    
 
     function injectHomeData() {
         const home = config.home || {};
@@ -1082,9 +1064,7 @@
         });
     }
 
-    /* ==================================================
-       Forms
-       ================================================== */
+    
 
     function injectServiceSelectOptions() {
         const services = Array.isArray(config.services) ? config.services : [];
@@ -1261,9 +1241,7 @@
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
     }
 
-    /* ==================================================
-       Smooth Anchors
-       ================================================== */
+    
 
     function initSmoothAnchors() {
         document.addEventListener("click", function (event) {

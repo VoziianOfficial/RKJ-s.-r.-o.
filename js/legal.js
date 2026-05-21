@@ -31,9 +31,7 @@
         });
     });
 
-    /* ==================================================
-       Helpers
-       ================================================== */
+    
 
     function getCurrentPage() {
         const path = window.location.pathname;
@@ -92,9 +90,7 @@
         });
     }
 
-    /* ==================================================
-       Meta
-       ================================================== */
+    
 
     function applyPageMeta() {
         const currentPage = getCurrentPage();
@@ -119,9 +115,7 @@
         }
     }
 
-    /* ==================================================
-       Logo
-       ================================================== */
+    
 
     function createLogoMarkup() {
         const brandName = safeText(config.brandName, "RKJ");
@@ -141,9 +135,7 @@
     `;
     }
 
-    /* ==================================================
-       Header
-       ================================================== */
+    
 
     function renderSiteHeader() {
         const mount = document.querySelector(selectors.headerMount);
@@ -286,9 +278,7 @@
         });
     }
 
-    /* ==================================================
-       Mobile Menu
-       ================================================== */
+    
 
     function renderMobileMenu() {
         const mount = document.querySelector(selectors.mobileMenuMount);
@@ -512,9 +502,7 @@
         });
     }
 
-    /* ==================================================
-       Footer
-       ================================================== */
+    
 
     function renderSiteFooter() {
         const mount = document.querySelector(selectors.footerMount);
@@ -634,9 +622,7 @@
     `;
     }
 
-    /* ==================================================
-       Cookie / Policy Banner
-       ================================================== */
+    
 
     function renderPolicyBanner() {
         const mount = document.querySelector(selectors.policyBannerMount);
@@ -702,9 +688,7 @@
         });
     }
 
-    /* ==================================================
-       Global Data Injection
-       ================================================== */
+    
 
     function injectGlobalData() {
         const globalTextMap = [
@@ -758,9 +742,7 @@
         }
     }
 
-    /* ==================================================
-       Smooth Anchors
-       ================================================== */
+    
 
     function initSmoothAnchors() {
         document.addEventListener("click", function (event) {

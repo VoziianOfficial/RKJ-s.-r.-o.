@@ -1,10 +1,6 @@
 "use strict";
 
-/*
-  RKJ s. r. o. global website configuration.
-  This file is loaded before page-specific scripts.
-  Change company, contact, service, legal, form, footer, and meta data here.
-*/
+
 
 window.SITE_CONFIG = {
     companyName: "RKJ s. r. o.",
@@ -1059,7 +1055,7 @@ window.SITE_CONFIG = {
                 },
                 {
                     title: "Conversion support",
-                    icon: "cursor-click",
+                    icon: "mouse-pointer-click",
                     text: "Better calls-to-action and forms support customer action."
                 }
             ],

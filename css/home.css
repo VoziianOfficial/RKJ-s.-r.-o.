@@ -1,11 +1,6 @@
-/* ==================================================
-   RKJ s. r. o. — Homepage Styles
-   File: /css/home.css
-   ================================================== */
 
-/* ==================================================
-   02. Homepage Hero — Reference Style
-   ================================================== */
+
+
 
 .home-hero {
     position: relative;
@@ -241,7 +236,7 @@
     animation: heroComputerFloat 6s ease-in-out infinite;
 }
 
-/* Можно оставить, если вдруг старые элементы остались в HTML */
+
 .home-hero__points,
 .home-hero__stats,
 .dashboard-mockup,
@@ -263,7 +258,7 @@
     }
 }
 
-/* Responsive */
+
 
 @media (max-width: 1180px) {
     .home-hero__panel {
@@ -374,9 +369,7 @@
     }
 }
 
-/* ==================================================
-   03. Intro Section — Wide Editorial Layout
-   ================================================== */
+
 
 .intro-section {
     position: relative;
@@ -490,7 +483,7 @@
     line-height: 1.78;
 }
 
-/* Right side is no longer a card — it is a clean feature rail */
+
 
 .intro-feature {
     position: relative;
@@ -622,7 +615,7 @@
     filter: drop-shadow(0 0 12px rgba(255, 94, 188, 0.72)) drop-shadow(0 0 22px rgba(255, 173, 138, 0.32));
 }
 
-/* Bottom capabilities as one wide horizontal strip, not separate cards */
+
 
 .intro-bullets {
     position: relative;
@@ -740,7 +733,7 @@
     z-index: 2;
 }
 
-/* Responsive */
+
 
 @media (max-width: 1100px) {
     .intro-panel {
@@ -845,9 +838,7 @@
     }
 }
 
-/* ==================================================
-   04. Services Preview — Premium Clickable Cards
-   ================================================== */
+
 
 .services-preview {
     position: relative;
@@ -901,7 +892,7 @@
     margin-inline: auto;
 }
 
-/* Desktop: text almost one line */
+
 @media (min-width: 1180px) {
     .services-preview .section-heading p {
         white-space: nowrap;
@@ -1054,7 +1045,7 @@
     height: 16px;
 }
 
-/* juicy card hover */
+
 .service-preview-card:hover {
     transform: translateY(-7px);
     border-color: rgba(255, 94, 188, 0.48);
@@ -1087,7 +1078,7 @@
     transform: translateX(2px);
 }
 
-/* Responsive */
+
 @media (max-width: 1180px) {
     .services-preview .section-heading h2 {
         max-width: 920px;
@@ -1130,9 +1121,7 @@
     }
 }
 
-/* ==================================================
-   05. Why Choose RKJ — Low Horizontal Layout
-   ================================================== */
+
 
 .why-section {
     position: relative;
@@ -1179,7 +1168,7 @@
     padding-block: clamp(10px, 2vw, 22px);
 }
 
-/* left text */
+
 
 .why-section__statement {
     position: relative;
@@ -1201,7 +1190,7 @@
     line-height: 1.68;
 }
 
-/* keep your animated line */
+
 
 .why-section__line {
     position: relative;
@@ -1224,7 +1213,7 @@
     animation: lineMove 3.4s ease-in-out infinite alternate;
 }
 
-/* right side: not cards, just horizontal rows */
+
 
 .why-section__cards {
     display: grid;
@@ -1232,7 +1221,7 @@
     border-top: 1px solid rgba(255, 255, 255, 0.09);
 }
 
-/* reset old card/glass styles */
+
 .why-card.glass-card,
 .why-card.hover-card {
     overflow: hidden;
@@ -1390,7 +1379,7 @@
     box-shadow: 0 14px 34px rgba(255, 94, 188, 0.24);
 }
 
-/* Responsive */
+
 
 @media (max-width: 1080px) {
     .why-section__grid {
@@ -1475,9 +1464,7 @@
     }
 }
 
-/* ==================================================
-   06. Process — Horizontal Line Roadmap
-   ================================================== */
+
 
 .process-section {
     position: relative;
@@ -1538,7 +1525,7 @@
     padding-top: 18px;
 }
 
-/* main horizontal line */
+
 .process-timeline::before {
     content: "";
     position: absolute;
@@ -1555,7 +1542,7 @@
     box-shadow: 0 0 26px rgba(255, 94, 188, 0.32);
 }
 
-/* animated light over the line */
+
 .process-timeline::after {
     content: "";
     position: absolute;
@@ -1710,7 +1697,7 @@
     }
 }
 
-/* Responsive */
+
 @media (max-width: 1100px) {
     .process-timeline {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1800,9 +1787,7 @@
     }
 }
 
-/* ==================================================
-   07. Advantage Section
-   ================================================== */
+
 
 .advantage-section {
     overflow: hidden;
@@ -1859,9 +1844,7 @@
     margin-top: 30px;
 }
 
-/* ==================================================
-   08. Campaign Features — Horizontal Line Layout
-   ================================================== */
+
 
 .campaign-section {
     position: relative;
@@ -1947,7 +1930,7 @@
     animation: lineMove 3.4s ease-in-out infinite alternate;
 }
 
-/* Right side: lines, not cards */
+
 
 .campaign-section__items {
     display: grid;
@@ -1957,7 +1940,7 @@
     border-left: 1px solid rgba(255, 255, 255, 0.09);
 }
 
-/* Reset old card styling if old classes remain */
+
 .campaign-feature,
 .campaign-feature.glass-card,
 .campaign-feature.hover-card {
@@ -2112,7 +2095,7 @@
         0 0 24px rgba(168, 85, 255, 0.16);
 }
 
-/* Responsive */
+
 
 @media (max-width: 1080px) {
     .campaign-section__grid {
@@ -2193,9 +2176,7 @@
     }
 }
 
-/* ==================================================
-   09. Testimonials — Swiper Reviews
-   ================================================== */
+
 
 .testimonials-section {
     position: relative;
@@ -2366,7 +2347,7 @@
     font-weight: 750;
 }
 
-/* Controls */
+
 
 .testimonials-controls {
     display: grid;
@@ -2441,12 +2422,12 @@
     box-shadow: 0 0 20px rgba(255, 94, 188, 0.55);
 }
 
-/* Remove old grid behavior if class remains somewhere */
+
 .testimonials-section__grid {
     display: block;
 }
 
-/* Responsive */
+
 
 @media (max-width: 760px) {
     .testimonials-section {
@@ -2491,9 +2472,7 @@
     }
 }
 
-/* ==================================================
-   10. Contact Section
-   ================================================== */
+
 
 .contact-section {
     position: relative;
@@ -2565,9 +2544,7 @@
     margin-top: 18px;
 }
 
-/* ==================================================
-   Animations
-   ================================================== */
+
 
 @keyframes heroOrbFloat {
     from {
@@ -2627,9 +2604,7 @@
     }
 }
 
-/* ==================================================
-   Responsive
-   ================================================== */
+
 
 @media (max-width: 1180px) {
     .home-hero__inner {
@@ -2866,10 +2841,7 @@
     }
 }
 
-/* ==================================================
-   FINAL HERO RESPONSIVE FIX
-   Put this at the very end of /css/home.css
-   ================================================== */
+
 
 .home-hero {
     position: relative;
@@ -2988,7 +2960,7 @@
     filter: drop-shadow(0 28px 46px rgba(0, 0, 0, 0.46)) drop-shadow(0 0 34px rgba(168, 85, 255, 0.12));
 }
 
-/* hide old hero elements if they are still in HTML */
+
 .home-hero__points,
 .home-hero__stats,
 .dashboard-mockup,
@@ -2999,7 +2971,7 @@
     display: none !important;
 }
 
-/* Large laptops */
+
 @media (max-width: 1280px) {
     .home-hero__panel {
         grid-template-columns: minmax(0, 1fr) minmax(420px, 0.9fr);
@@ -3017,7 +2989,7 @@
     }
 }
 
-/* Tablets landscape */
+
 @media (max-width: 1080px) {
     .home-hero__panel {
         grid-template-columns: minmax(0, 1fr) minmax(360px, 0.82fr);
@@ -3043,7 +3015,7 @@
     }
 }
 
-/* Tablets portrait */
+
 @media (max-width: 900px) {
     .home-hero {
         padding-top: 24px;
@@ -3102,7 +3074,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 680px) {
     .home-hero .container-wide {
         width: min(100% - 24px, var(--container-wide));
@@ -3162,7 +3134,7 @@
     }
 }
 
-/* Small mobile */
+
 @media (max-width: 460px) {
     .home-hero__content {
         padding: 26px 18px 0;
@@ -3187,7 +3159,7 @@
     }
 }
 
-/* Very small phones */
+
 @media (max-width: 380px) {
     .home-hero__content {
         padding: 24px 16px 0;
@@ -3207,9 +3179,7 @@
     }
 }
 
-/* ==================================================
-   03. Marquee Statement Strip
-   ================================================== */
+
 
 .marquee-strip {
     position: relative;
@@ -3295,7 +3265,7 @@
     box-shadow: 0 0 24px rgba(255, 94, 188, 0.55);
 }
 
-/* При наведении слова становятся только контуром */
+
 .marquee-strip:hover .marquee-strip__word {
     color: transparent;
     -webkit-text-stroke: 1.2px rgba(255, 255, 255, 0.82);
@@ -3320,7 +3290,7 @@
     }
 }
 
-/* Responsive */
+
 @media (max-width: 760px) {
     .marquee-strip {
         padding: 14px 0;
@@ -3359,7 +3329,7 @@
     }
 }
 
-/* Wider heading only for Services section */
+
 .services-preview .section-heading {
     width: 100%;
     max-width: 1180px;
@@ -3381,9 +3351,7 @@
     padding-bottom: 0;
 }
 
-/* ==================================================
-   FINAL WHY SECTION FIX
-   ================================================== */
+
 
 .why-section.section {
     padding-top: clamp(34px, 4vw, 58px);
@@ -3448,7 +3416,7 @@
     border-top: 1px solid rgba(255, 255, 255, 0.09);
 }
 
-/* сброс карточного вида */
+
 .why-section .why-card,
 .why-section .why-card.glass-card,
 .why-section .why-card.hover-card {
@@ -3658,7 +3626,7 @@
     }
 }
 
-/* Remove bottom spacing only for Services section */
+
 .services-preview.section {
     padding-bottom: 0 !important;
 }
@@ -3669,7 +3637,7 @@
     }
 }
 
-/* Remove top and bottom spacing only for Campaign section */
+
 .campaign-section.section {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
@@ -3682,7 +3650,7 @@
     }
 }
 
-/* Half spacing only for Advantage section */
+
 .advantage-section.section {
     padding-top: clamp(32px, 3.5vw, 56px) !important;
     padding-bottom: clamp(32px, 3.5vw, 56px) !important;
@@ -3695,9 +3663,7 @@
     }
 }
 
-/* ==================================================
-   Campaign Features — Mobile Final Adaptation
-   ================================================== */
+
 
 @media (max-width: 760px) {
     .campaign-section .container-wide {
@@ -3941,9 +3907,7 @@
         }
     }
 
-    /* ==================================================
-   FINAL INTRO SECTION — Background Photo, No Card Look
-   ================================================== */
+    
 
     .intro-section.section {
         position: relative;
@@ -3985,7 +3949,7 @@
         background: linear-gradient(to bottom, transparent, rgba(6, 0, 18, 0.82));
     }
 
-    /* сам intro-panel больше НЕ карточка */
+    
     .intro-section .intro-panel {
         position: relative;
         z-index: 2;
@@ -4006,7 +3970,7 @@
         display: none;
     }
 
-    /* левая часть — крупный editorial text */
+    
     .intro-section .intro-panel__content {
         position: relative;
         z-index: 2;
@@ -4028,7 +3992,7 @@
         line-height: 1.76;
     }
 
-    /* правая часть — не карточка, а чистый список на линиях */
+    
     .intro-section .intro-feature {
         position: relative;
         z-index: 2;
@@ -4162,7 +4126,7 @@
             drop-shadow(0 0 12px rgba(255, 94, 188, 0.72)) drop-shadow(0 0 22px rgba(255, 173, 138, 0.32));
     }
 
-    /* нижние bullets — одна стеклянная лента, но не карточки */
+    
     .intro-section .intro-bullets {
         position: relative;
         z-index: 2;
@@ -4243,7 +4207,7 @@
             drop-shadow(0 0 12px rgba(255, 94, 188, 0.75)) drop-shadow(0 0 22px rgba(255, 173, 138, 0.35));
     }
 
-    /* Responsive */
+    
     @media (max-width: 1100px) {
         .intro-section .intro-panel {
             grid-template-columns: 1fr;
@@ -4327,9 +4291,7 @@
     }
 
 
-        /* ==================================================
-       10. Homepage FAQ Accordion — Background Photo
-       ================================================== */
+        
     
         .home-faq-section {
             position: relative;
@@ -4377,7 +4339,7 @@
             z-index: 2;
         }
     
-        /* Layout */
+        
     
         .home-faq-section__grid {
             display: grid;
@@ -4428,7 +4390,7 @@
             animation: lineMove 3.4s ease-in-out infinite alternate;
         }
     
-        /* Accordion */
+        
     
         .home-faq {
             display: grid;
@@ -4559,7 +4521,7 @@
                letter-spacing: 0.01em;
            }
     
-        /* Tablet */
+        
     
         @media (max-width: 1080px) {
             .home-faq-section__grid {
@@ -4582,7 +4544,7 @@
             }
         }
     
-        /* Mobile */
+        
     
         @media (max-width: 680px) {
             .home-faq-section {
@@ -4649,7 +4611,7 @@
             }
         }
     
-        /* Small mobile */
+        
     
         @media (max-width: 430px) {
             .home-faq-section .container-wide {

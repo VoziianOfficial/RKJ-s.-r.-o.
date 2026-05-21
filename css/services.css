@@ -1,11 +1,6 @@
-/* ==================================================
-   RKJ s. r. o. — Service Pages Styles
-   File: /css/services.css
-   ================================================== */
 
-/* ==================================================
-   02. Service Hero
-   ================================================== */
+
+
 
 	.service-hero {
 	    position: relative;
@@ -95,9 +90,7 @@
     background: rgba(255, 255, 255, 0.045);
 }
 
-/* ==================================================
-   Shared Service Section Headers
-   ================================================== */
+
 
 .service-section {
     position: relative;
@@ -121,9 +114,7 @@
     font-size: clamp(15px, 1.3vw, 17px);
 }
 
-/* ==================================================
-   03. Service Overview
-   ================================================== */
+
 
 .service-overview {
     overflow: hidden;
@@ -187,9 +178,7 @@
     text-transform: uppercase;
 }
 
-/* ==================================================
-   04. What We Manage
-   ================================================== */
+
 
 .service-manage {
     position: relative;
@@ -235,9 +224,7 @@
     font-size: 14px;
 }
 
-/* ==================================================
-   05. Why This Service Matters
-   ================================================== */
+
 
 .service-matters {
     overflow: hidden;
@@ -322,9 +309,7 @@
     color: var(--color-accent-peach);
 }
 
-/* ==================================================
-   06. RKJ Method / Approach
-   ================================================== */
+
 
 .service-method {
     position: relative;
@@ -368,9 +353,7 @@
     font-size: 14px;
 }
 
-/* ==================================================
-   07. Process Timeline
-   ================================================== */
+
 
 .service-process {
     position: relative;
@@ -425,9 +408,7 @@
     font-size: 20px;
 }
 
-/* ==================================================
-   08. Benefits / Feature Grid
-   ================================================== */
+
 
 .service-benefits {
     position: relative;
@@ -473,9 +454,7 @@
     font-size: 14px;
 }
 
-/* ==================================================
-   09. FAQ
-   ================================================== */
+
 
 .service-faq {
     position: relative;
@@ -567,9 +546,7 @@
     font-size: 14px;
 }
 
-/* ==================================================
-   10. CTA / Contact Strip
-   ================================================== */
+
 
 .service-cta-section {
     padding-bottom: clamp(86px, 9vw, 132px);
@@ -642,9 +619,7 @@
     color: #ffffff;
 }
 
-/* ==================================================
-   Optional Service Contact Form Block
-   ================================================== */
+
 
 .service-contact-mini {
     margin-top: 26px;
@@ -654,9 +629,7 @@
     max-width: 620px;
 }
 
-/* ==================================================
-   Responsive
-   ================================================== */
+
 
 @media (max-width: 1180px) {
 
@@ -793,9 +766,7 @@
     }
 }
 
-/* ==================================================
-   Service Hero — Full Background Center Layout
-   ================================================== */
+
 
 	.service-hero {
 	    position: relative;
@@ -897,7 +868,7 @@ width: 100%;
     min-height: 46px;
 }
 
-/* Navigation row under buttons */
+
 
 .service-hero__nav {
     display: flex;
@@ -961,7 +932,7 @@ width: 100%;
     opacity: 1;
 }
 
-/* Mini chips */
+
 
 .service-hero__mini {
     display: flex;
@@ -1001,7 +972,7 @@ width: 100%;
     background: rgba(255, 94, 188, 0.11);
 }
 
-/* Remove old panel look if old HTML/classes remain */
+
 
 .service-hero__panel,
 .service-hero__panel.glass-card {
@@ -1012,9 +983,7 @@ width: 100%;
     backdrop-filter: none;
 }
 
-/* ==================================================
-   Service Hero Responsive
-   ================================================== */
+
 
 @media (max-width: 980px) {
     .service-hero {
@@ -1154,9 +1123,7 @@ width: 100%;
     }
 }
 
-/* ==================================================
-   Service Hero — Smaller Tablet/Mobile Spacing
-   ================================================== */
+
 
 @media (max-width: 980px) {
     .service-hero {
@@ -1187,9 +1154,7 @@ width: 100%;
     }
 }
 
-/* ==================================================
-   Service Overview — Text Card + Fixed Photo Card
-   ================================================== */
+
 
 .service-overview.service-section {
     position: relative;
@@ -1208,7 +1173,7 @@ width: 100%;
     align-items: stretch;
 }
 
-/* левая карточка */
+
 .service-overview__content {
     position: relative;
     display: flex;
@@ -1259,7 +1224,7 @@ width: 100%;
     line-height: 1.74;
 }
 
-/* правая фотокарточка */
+
 .service-overview__media {
     position: relative;
     min-height: clamp(380px, 34vw, 520px);
@@ -1275,7 +1240,7 @@ width: 100%;
         inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
-/* фото не влияет на размер карточки */
+
 .service-overview__media img {
     position: absolute;
     inset: 0;
@@ -1354,15 +1319,12 @@ width: 100%;
     letter-spacing: -0.04em;
 }
 
-/* старые metrics точно убираем, если где-то остались */
+
 .service-overview__metrics {
     display: none !important;
 }
 
-/* ==================================================
-   Service Hero — Half Bottom Padding
-   For all service pages
-   ================================================== */
+
 
 .service-hero__inner {
     padding-bottom: clamp(28px, 3vw, 46px) !important;
@@ -1386,10 +1348,7 @@ width: 100%;
     }
 }
 
-/* ==================================================
-   Service Manage — Clean Animated Line Layout
-   For all service pages
-   ================================================== */
+
 
 .service-manage.service-section {
     position: relative;
@@ -1415,7 +1374,7 @@ width: 100%;
     align-items: center;
 }
 
-/* Left side */
+
 
 .service-manage__header {
     position: relative;
@@ -1458,7 +1417,7 @@ width: 100%;
     animation: lineMove 3.4s ease-in-out infinite alternate;
 }
 
-/* Right side list */
+
 
 .service-manage__list {
     display: grid;
@@ -1466,7 +1425,7 @@ width: 100%;
     border-top: 1px solid rgba(255, 255, 255, 0.09);
 }
 
-/* reset old cards if JS/HTML still has them */
+
 .service-manage-card,
 .service-manage-card.glass-card,
 .service-manage-card.hover-card {
@@ -1477,7 +1436,7 @@ width: 100%;
     backdrop-filter: none !important;
 }
 
-/* new row */
+
 
 .service-manage-row,
 .service-manage-card {
@@ -1637,7 +1596,7 @@ width: 100%;
         0 0 24px rgba(168, 85, 255, 0.16);
 }
 
-/* Tablet */
+
 
 @media (max-width: 1080px) {
     .service-manage__layout {
@@ -1658,7 +1617,7 @@ width: 100%;
     }
 }
 
-/* Mobile */
+
 
 @media (max-width: 680px) {
     .service-manage .container-wide {
@@ -1729,11 +1688,9 @@ width: 100%;
         animation: none !important;
     }
 }
-/* ==================================================
-   Service Overview — Tablet & Mobile Final Adaptation
-   ================================================== */
 
-/* Tablet */
+
+
 @media (max-width: 980px) {
     .service-overview.service-section {
         padding-top: clamp(34px, 5vw, 58px);
@@ -1791,7 +1748,7 @@ width: 100%;
     }
 }
 
-/* Mobile */
+
 @media (max-width: 680px) {
     .service-overview.service-section {
         padding-top: 30px;
@@ -1866,7 +1823,7 @@ width: 100%;
     }
 }
 
-/* Small mobile */
+
 @media (max-width: 430px) {
     .service-overview.service-section {
         padding-top: 26px;
@@ -1908,9 +1865,7 @@ width: 100%;
     }
 }
 
-/* ==================================================
-   Service Process — Cinematic Horizontal Process
-   ================================================== */
+
 
 .service-process.service-section {
     position: relative;
@@ -1969,7 +1924,7 @@ width: 100%;
     margin-inline: auto;
 }
 
-/* Header */
+
 
 .service-process__header {
     display: grid;
@@ -1994,7 +1949,7 @@ width: 100%;
     line-height: 1.72;
 }
 
-/* Process line */
+
 
 .service-process__track {
     position: relative;
@@ -2036,7 +1991,7 @@ width: 100%;
     animation: serviceProcessLine 4.8s ease-in-out infinite alternate;
 }
 
-/* Step */
+
 
 .service-process-step,
 .service-process-step.glass-card,
@@ -2132,9 +2087,7 @@ width: 100%;
         transform: translateX(455%);
     }
 }
-/* ==================================================
-   Service Process — Final Clean Header + Number Circles
-   ================================================== */
+
 
 .service-process.service-section {
     position: relative;
@@ -2189,7 +2142,7 @@ width: 100%;
     margin-inline: auto;
 }
 
-/* Header — более ровный и широкий */
+
 
 .service-process__header {
     display: grid;
@@ -2224,7 +2177,7 @@ width: 100%;
     line-height: 1.72;
 }
 
-/* Track */
+
 
 .service-process__track,
 .service-process__timeline {
@@ -2236,7 +2189,7 @@ width: 100%;
     padding-top: 0;
 }
 
-/* общая линия */
+
 .service-process__track::before,
 .service-process__timeline::before {
     content: "";
@@ -2255,7 +2208,7 @@ width: 100%;
     box-shadow: 0 0 28px rgba(255, 94, 188, 0.34);
 }
 
-/* бегущий свет */
+
 .service-process__track::after,
 .service-process__timeline::after {
     content: "";
@@ -2271,7 +2224,7 @@ width: 100%;
     animation: serviceProcessLine 4.8s ease-in-out infinite alternate;
 }
 
-/* Step reset: убираем карточность */
+
 
 .service-process-step,
 .service-process-step.glass-card,
@@ -2292,7 +2245,7 @@ width: 100%;
     transform: none !important;
 }
 
-/* старые псевдо-кружки отключаем, чтобы не конфликтовали */
+
 .service-process-step::before,
 .service-process-step::after,
 .service-process-step.glass-card::before,
@@ -2300,7 +2253,7 @@ width: 100%;
     display: none !important;
 }
 
-/* цифра теперь внутри нормального кружочка */
+
 
 .service-process-step>span {
     position: relative;
@@ -2368,7 +2321,7 @@ width: 100%;
     }
 }
 
-/* Tablet */
+
 
 @media (max-width: 980px) {
     .service-process.service-section {
@@ -2439,7 +2392,7 @@ width: 100%;
     }
 }
 
-/* Mobile */
+
 
 @media (max-width: 680px) {
     .service-process.service-section {
@@ -2522,7 +2475,7 @@ width: 100%;
     }
 }
 
-/* Small mobile */
+
 
 @media (max-width: 430px) {
     .service-process.service-section {
@@ -2551,9 +2504,7 @@ width: 100%;
     }
 }
 
-/* ==================================================
-   Service Process — Bigger Transparent Header Visual
-   ================================================== */
+
 
 .service-process__header {
     display: grid;
@@ -2578,7 +2529,7 @@ width: 100%;
     text-wrap: balance;
 }
 
-/* убираем фон/карточку у визуала */
+
 .service-process__header-media {
     position: relative;
     display: flex;
@@ -2599,7 +2550,7 @@ width: 100%;
     -webkit-backdrop-filter: none !important;
 }
 
-/* сама картинка больше, но не ломает блок */
+
 .service-process__header-media img {
     position: relative !important;
     inset: auto !important;
@@ -2631,9 +2582,7 @@ width: 100%;
         drop-shadow(0 36px 62px rgba(0, 0, 0, 0.48)) drop-shadow(0 0 42px rgba(255, 94, 188, 0.32)) drop-shadow(0 0 52px rgba(168, 85, 255, 0.22));
 }
 
-/* ==================================================
-   Service Process — Tablet Adaptation
-   ================================================== */
+
 
 @media (max-width: 980px) {
     .service-process.service-section {
@@ -2714,9 +2663,7 @@ width: 100%;
     }
 }
 
-/* ==================================================
-   Service Process — Mobile Adaptation
-   ================================================== */
+
 
 @media (max-width: 680px) {
     .service-process.service-section {
@@ -2829,11 +2776,9 @@ width: 100%;
     }
 }
 
-/* ==================================================
-   Service Process — Fix Hover Clipping + Better Mobile Track
-   ================================================== */
 
-/* чтобы круги/иконки не обрезались при hover */
+
+
 .service-process__track,
 .service-process__timeline {
     overflow: visible !important;
@@ -2846,27 +2791,25 @@ width: 100%;
     isolation: visible;
 }
 
-/* убираем конфликт старых hover-card эффектов */
+
 .service-process-step.hover-card:hover,
 .service-process-step.glass-card:hover {
     transform: none !important;
 }
 
-/* desktop/tablet: даем воздуху вокруг circle */
+
 .service-process-step>span {
     flex: 0 0 auto;
     overflow: visible;
 }
 
-/* фикс, чтобы glow не резался */
+
 .service-process-step>span::before,
 .service-process-step>span::after {
     pointer-events: none;
 }
 
-/* ==================================================
-   Tablet — clean 2-column blocks
-   ================================================== */
+
 
 @media (max-width: 980px) {
 
@@ -2918,9 +2861,7 @@ width: 100%;
     }
 }
 
-/* ==================================================
-   Mobile — redesign track as vertical premium list
-   ================================================== */
+
 
 @media (max-width: 680px) {
 
@@ -2937,7 +2878,7 @@ width: 100%;
         border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     }
 
-    /* вертикальная линия слева */
+    
     .service-process__track::before,
     .service-process__timeline::before {
         content: "";
@@ -2957,7 +2898,7 @@ width: 100%;
         box-shadow: 0 0 20px rgba(255, 94, 188, 0.26);
     }
 
-    /* убираем бегущую горизонтальную линию на мобилке */
+    
     .service-process__track::after,
     .service-process__timeline::after {
         display: none !important;
@@ -3020,7 +2961,7 @@ width: 100%;
     }
 }
 
-/* Small mobile */
+
 @media (max-width: 430px) {
 
     .service-process__track::before,
@@ -3048,10 +2989,7 @@ width: 100%;
     }
 }
 
-/* ==================================================
-   Service Matters — Background Photo + Glass Panel
-   For all service pages
-   ================================================== */
+
 
 .service-matters.service-section {
     position: relative;
@@ -3105,7 +3043,7 @@ width: 100%;
     margin-inline: auto;
 }
 
-/* Glass panel */
+
 
 .service-matters__panel {
     position: relative;
@@ -3144,7 +3082,7 @@ width: 100%;
     z-index: 2;
 }
 
-/* Left content */
+
 
 .service-matters__content {
     max-width: 680px;
@@ -3166,7 +3104,7 @@ width: 100%;
     line-height: 1.72;
 }
 
-/* Right list */
+
 
 .service-matters__points {
     display: grid;
@@ -3272,10 +3210,7 @@ width: 100%;
     line-height: 1.35;
 }
 
-/* ==================================================
-   Service Method — Wide Header + Two Photo Cards
-   For all service pages
-   ================================================== */
+
 
 .service-method.service-section {
     position: relative;
@@ -3294,7 +3229,7 @@ width: 100%;
     margin-inline: auto;
 }
 
-/* Header */
+
 
 .service-method__header {
     display: grid;
@@ -3324,7 +3259,7 @@ width: 100%;
     line-height: 1.72;
 }
 
-/* Two photo cards */
+
 
 .service-method__media-grid {
     display: grid;
@@ -3432,15 +3367,12 @@ width: 100%;
     line-height: 1.62;
 }
 
-/* старую сетку карточек скрываем, если она где-то осталась */
+
 .service-method__grid {
     display: none !important;
 }
 
-/* ==================================================
-   Service Benefits — Light Compact Contrast Section
-   For all service pages
-   ================================================== */
+
 
 .service-benefits.service-section {
     position: relative;
@@ -3474,7 +3406,7 @@ width: 100%;
     margin-inline: auto;
 }
 
-/* Header */
+
 
 .service-benefits .service-section__header {
     display: grid;
@@ -3504,7 +3436,7 @@ width: 100%;
     line-height: 1.68;
 }
 
-/* Grid */
+
 
 .service-benefits__grid {
     display: grid;
@@ -3512,7 +3444,7 @@ width: 100%;
     gap: clamp(14px, 2vw, 20px);
 }
 
-/* Compact cards */
+
 
 .service-benefit-card,
 .service-benefit-card.glass-card,
@@ -3571,7 +3503,7 @@ width: 100%;
     opacity: 1;
 }
 
-/* Icon */
+
 
 .service-benefit-card .icon-badge {
     position: relative;
@@ -3603,7 +3535,7 @@ width: 100%;
         0 0 28px rgba(168, 85, 255, 0.16);
 }
 
-/* Text inside card */
+
 
 .service-benefit-card h3 {
     position: relative;
@@ -3625,11 +3557,9 @@ width: 100%;
     line-height: 1.58;
 }
 
-/* ==================================================
-   Service Benefits — Final Tablet & Mobile Adaptation
-   ================================================== */
 
-/* Tablet */
+
+
 @media (max-width: 1180px) {
     .service-benefits.service-section {
         padding-top: clamp(44px, 6vw, 68px) !important;
@@ -3701,7 +3631,7 @@ width: 100%;
     }
 }
 
-/* Small tablet */
+
 @media (max-width: 820px) {
     .service-benefits__grid {
         grid-template-columns: 1fr !important;
@@ -3715,7 +3645,7 @@ width: 100%;
     }
 }
 
-/* Mobile */
+
 @media (max-width: 680px) {
     .service-benefits.service-section {
         padding-top: 36px !important;
@@ -3806,7 +3736,7 @@ width: 100%;
     }
 }
 
-/* Small mobile */
+
 @media (max-width: 430px) {
     .service-benefits.service-section {
         padding-top: 32px !important;
@@ -3847,11 +3777,9 @@ width: 100%;
     }
 }
 
-/* ==================================================
-   Service Method — Final Tablet & Mobile Adaptation
-   ================================================== */
 
-/* Tablet */
+
+
 @media (max-width: 1180px) {
     .service-method.service-section {
         padding-top: clamp(44px, 6vw, 68px) !important;
@@ -3923,7 +3851,7 @@ width: 100%;
     }
 }
 
-/* Small tablet / portrait tablet */
+
 @media (max-width: 820px) {
     .service-method__media-grid {
         grid-template-columns: 1fr !important;
@@ -3935,7 +3863,7 @@ width: 100%;
     }
 }
 
-/* Mobile */
+
 @media (max-width: 680px) {
     .service-method.service-section {
         padding-top: 36px !important;
@@ -4027,7 +3955,7 @@ width: 100%;
     }
 }
 
-/* Small mobile */
+
 @media (max-width: 430px) {
     .service-method.service-section {
         padding-top: 32px !important;
@@ -4077,11 +4005,9 @@ width: 100%;
     }
 }
 
-/* ==================================================
-   Service Matters — Final Tablet & Mobile Adaptation
-   ================================================== */
 
-/* Tablet */
+
+
 @media (max-width: 1180px) {
     .service-matters.service-section {
         padding-top: clamp(44px, 6vw, 68px) !important;
@@ -4155,7 +4081,7 @@ width: 100%;
     }
 }
 
-/* Small tablet */
+
 @media (max-width: 920px) {
     .service-matters__points {
         grid-template-columns: 1fr !important;
@@ -4170,7 +4096,7 @@ width: 100%;
     }
 }
 
-/* Mobile */
+
 @media (max-width: 680px) {
     .service-matters.service-section {
         padding-top: 36px !important;
@@ -4257,7 +4183,7 @@ width: 100%;
     }
 }
 
-/* Small mobile */
+
 @media (max-width: 430px) {
     .service-matters.service-section {
         padding-top: 32px !important;
@@ -4300,9 +4226,7 @@ width: 100%;
     }
 }
 
-/* ==================================================
-   Service CTA — Icon Contact Links + Hover Shine
-   ================================================== */
+
 
 .service-cta {
     position: relative;
@@ -4310,7 +4234,7 @@ width: 100%;
     isolation: isolate;
 }
 
-/* блик на карточке */
+
 .service-cta::after {
     content: "";
     position: absolute;
@@ -4341,7 +4265,7 @@ width: 100%;
     z-index: 3;
 }
 
-/* справа кнопка + иконки */
+
 .service-cta__actions {
     display: grid;
     gap: 14px;
@@ -4356,7 +4280,7 @@ width: 100%;
     text-align: right;
 }
 
-/* круглые иконки */
+
 .service-cta__contact-icon {
     position: relative;
     display: inline-flex;
@@ -4425,7 +4349,7 @@ width: 100%;
     filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.45));
 }
 
-/* Tablet */
+
 @media (max-width: 980px) {
     .service-cta__inner {
         grid-template-columns: 1fr;
@@ -4442,7 +4366,7 @@ width: 100%;
     }
 }
 
-/* Mobile */
+
 @media (max-width: 680px) {
     .service-cta__actions {
         width: 100%;
@@ -4471,7 +4395,7 @@ width: 100%;
     }
 }
 
-/* Small mobile */
+
 @media (max-width: 430px) {
     .service-cta__contact-icon {
         width: 42px;
@@ -4484,9 +4408,7 @@ width: 100%;
     }
 }
 
-/* ==================================================
-   Service CTA — Compact Contact Actions + Shine
-   ================================================== */
+
 
 .service-cta {
     position: relative;
@@ -4607,7 +4529,7 @@ width: 100%;
     opacity: 1;
 }
 
-/* Tablet */
+
 @media (max-width: 980px) {
     .service-cta__actions {
         justify-items: start;
@@ -4618,7 +4540,7 @@ width: 100%;
     }
 }
 
-/* Mobile */
+
 @media (max-width: 680px) {
     .service-cta__actions {
         width: 100%;
@@ -4642,14 +4564,12 @@ width: 100%;
     }
 }
 
-/* Remove top padding only for service CTA section */
+
 .service-cta-section.section {
     padding-top: 0 !important;
 }
 
-/* ==================================================
-   Service Marquee — Infinite Running Line
-   ================================================== */
+
 
 .service-marquee-section {
     position: relative;
@@ -4785,7 +4705,7 @@ width: 100%;
     }
 }
 
-/* Tablet */
+
 @media (max-width: 980px) {
     .service-marquee-section {
         padding-top: 24px;
@@ -4803,7 +4723,7 @@ width: 100%;
     }
 }
 
-/* Mobile */
+
 @media (max-width: 680px) {
     .service-marquee-section {
         padding-top: 18px;
@@ -4845,9 +4765,7 @@ width: 100%;
     }
 }
 
-/* ==================================================
-   Service Marquee — Hover Border Fix
-   ================================================== */
+
 
 .service-marquee-section {
     overflow: hidden;
@@ -4871,7 +4789,7 @@ width: 100%;
     transform-origin: center;
 }
 
-/* фикс hover — border больше не вылазит */
+
 .service-marquee__list li:hover {
     transform: translateY(-3px);
     color: transparent;
@@ -4895,9 +4813,7 @@ width: 100%;
         transform: translateY(-2px);
     }
 }
-/* ==================================================
-   Service Matters — Brighter Background Image
-   ================================================== */
+
 
 .service-matters.service-section {
     background:
@@ -4923,7 +4839,7 @@ width: 100%;
     opacity: 0.7 !important;
 }
 
-/* панель делаем легче и прозрачнее */
+
 .service-matters__panel {
     background:
         linear-gradient(135deg, rgba(6, 0, 18, 0.52), rgba(6, 0, 18, 0.22)),
@@ -4933,7 +4849,7 @@ width: 100%;
     -webkit-backdrop-filter: blur(14px);
 }
 
-/* текст оставляем хорошо читаемым */
+
 .service-matters__content h2 {
     color: #ffffff;
     text-shadow: 0 12px 34px rgba(0, 0, 0, 0.34);
@@ -4943,7 +4859,7 @@ width: 100%;
     color: rgba(255, 248, 255, 0.86) !important;
 }
 
-/* пункты чуть светлее */
+
 .service-matters__points li {
     background:
         linear-gradient(135deg, rgba(255, 255, 255, 0.095), rgba(255, 255, 255, 0.035)),
@@ -4960,9 +4876,7 @@ width: 100%;
     color: #ffffff !important;
 }
 
-/* ==================================================
-   Service CTA — Background Photo Card
-   ================================================== */
+
 
 .service-cta {
     position: relative;
@@ -4979,14 +4893,14 @@ width: 100%;
             rgba(6, 0, 18, 0.78) 100%),
         radial-gradient(circle at 14% 18%, rgba(255, 94, 188, 0.22), transparent 34%),
         radial-gradient(circle at 86% 76%, rgba(168, 85, 255, 0.18), transparent 38%),
-        url("../assets/images/service-cta-bg.jpg") center / cover no-repeat !important;
+        url("../assets/images/service-cta-bg.webp") center / cover no-repeat !important;
     border-color: rgba(255, 255, 255, 0.13) !important;
     box-shadow:
         0 30px 90px rgba(0, 0, 0, 0.32),
         inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
 }
 
-/* декоративная сетка поверх фото */
+
 .service-cta::before {
     content: "";
     position: absolute;
@@ -5001,7 +4915,7 @@ width: 100%;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 88%);
 }
 
-/* блик при наведении */
+
 .service-cta::after {
     content: "";
     position: absolute;
@@ -5051,5 +4965,5 @@ width: 100%;
             rgba(6, 0, 18, 0.42) 0%,
             rgba(6, 0, 18, 0.18) 48%,
             rgba(6, 0, 18, 0.64) 100%),
-        url("../assets/images/service-cta-bg.jpg") center / cover no-repeat !important;
+        url("../assets/images/service-cta-bg.webp") center / cover no-repeat !important;
 }
