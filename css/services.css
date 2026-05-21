@@ -1,0 +1,795 @@
+/* ==================================================
+   RKJ s. r. o. — Service Pages Styles
+   File: /css/services.css
+   ================================================== */
+
+/* ==================================================
+   02. Service Hero
+   ================================================== */
+
+.service-hero {
+    position: relative;
+    display: grid;
+    align-items: end;
+    min-height: 680px;
+    overflow: hidden;
+    padding-top: clamp(96px, 9vw, 140px);
+    padding-bottom: clamp(64px, 8vw, 110px);
+    isolation: isolate;
+    background:
+        linear-gradient(90deg, rgba(6, 0, 18, 0.94), rgba(6, 0, 18, 0.58), rgba(6, 0, 18, 0.88)),
+        var(--service-hero-image, none) center / cover no-repeat,
+        linear-gradient(135deg, #090016, #030008);
+}
+
+.service-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+        radial-gradient(circle at 18% 22%, rgba(255, 94, 188, 0.26), transparent 34%),
+        radial-gradient(circle at 78% 22%, rgba(168, 85, 255, 0.2), transparent 34%),
+        linear-gradient(180deg, rgba(6, 0, 18, 0.18), rgba(6, 0, 18, 0.96));
+}
+
+.service-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+    background-size: 74px 74px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.72), transparent 82%);
+}
+
+.service-hero__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.58fr);
+    gap: clamp(30px, 5vw, 72px);
+    align-items: end;
+}
+
+.service-hero__content {
+    max-width: 830px;
+}
+
+.service-hero__content h1 {
+    max-width: 900px;
+}
+
+.service-hero__panel {
+    padding: clamp(22px, 3vw, 32px);
+    border-radius: var(--radius-xl);
+}
+
+.service-hero__panel p {
+    font-size: clamp(15px, 1.35vw, 18px);
+}
+
+.service-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.service-hero__mini {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.service-hero__mini span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 8px 11px;
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-pill);
+    color: var(--color-text-soft);
+    font-size: 12px;
+    font-weight: 800;
+    background: rgba(255, 255, 255, 0.045);
+}
+
+/* ==================================================
+   Shared Service Section Headers
+   ================================================== */
+
+.service-section {
+    position: relative;
+}
+
+.service-section--soft {
+    background:
+        radial-gradient(circle at 10% 18%, rgba(255, 94, 188, 0.08), transparent 32%),
+        radial-gradient(circle at 88% 36%, rgba(168, 85, 255, 0.08), transparent 34%);
+}
+
+.service-section__header {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(280px, 0.48fr);
+    gap: clamp(24px, 5vw, 62px);
+    align-items: end;
+    margin-bottom: clamp(32px, 5vw, 54px);
+}
+
+.service-section__header p {
+    font-size: clamp(15px, 1.3vw, 17px);
+}
+
+/* ==================================================
+   03. Service Overview
+   ================================================== */
+
+.service-overview {
+    overflow: hidden;
+}
+
+.service-overview__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
+    gap: clamp(28px, 5vw, 72px);
+    align-items: stretch;
+}
+
+.service-overview__content {
+    padding: clamp(28px, 5vw, 56px);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-xl);
+    background:
+        radial-gradient(circle at 0% 0%, rgba(255, 94, 188, 0.14), transparent 42%),
+        rgba(255, 255, 255, 0.03);
+}
+
+.service-overview__content p {
+    max-width: 760px;
+    margin-top: 22px;
+    font-size: clamp(15px, 1.45vw, 18px);
+}
+
+.service-overview__metrics {
+    display: grid;
+    gap: 16px;
+}
+
+.service-metric {
+    display: grid;
+    align-content: center;
+    min-height: 138px;
+    padding: 24px;
+}
+
+.service-metric strong {
+    position: relative;
+    z-index: 2;
+    color: transparent;
+    font-family: var(--font-heading);
+    font-size: clamp(34px, 4vw, 54px);
+    line-height: 1;
+    letter-spacing: -0.06em;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.service-metric span {
+    position: relative;
+    z-index: 2;
+    margin-top: 8px;
+    color: var(--color-text-soft);
+    font-size: 13px;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* ==================================================
+   04. What We Manage
+   ================================================== */
+
+.service-manage {
+    position: relative;
+}
+
+.service-manage::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    right: -160px;
+    z-index: -1;
+    width: 440px;
+    height: 440px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(168, 85, 255, 0.18), transparent 70%);
+    filter: blur(18px);
+}
+
+.service-manage__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.service-manage-card {
+    min-height: 260px;
+    padding: 24px;
+}
+
+.service-manage-card .icon-badge,
+.service-manage-card h3,
+.service-manage-card p {
+    position: relative;
+    z-index: 2;
+}
+
+.service-manage-card h3 {
+    margin-top: 26px;
+}
+
+.service-manage-card p {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+/* ==================================================
+   05. Why This Service Matters
+   ================================================== */
+
+.service-matters {
+    overflow: hidden;
+}
+
+.service-matters__panel {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.72fr);
+    gap: clamp(28px, 5vw, 72px);
+    align-items: center;
+    padding: clamp(28px, 5vw, 58px);
+    overflow: hidden;
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-xl);
+    background:
+        radial-gradient(circle at 12% 0%, rgba(255, 94, 188, 0.16), transparent 42%),
+        radial-gradient(circle at 90% 86%, rgba(255, 173, 138, 0.12), transparent 42%),
+        rgba(255, 255, 255, 0.04);
+    box-shadow: var(--shadow-soft);
+}
+
+.service-matters__panel::before {
+    content: "";
+    position: absolute;
+    right: 12%;
+    bottom: -120px;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(168, 85, 255, 0.22), transparent 68%);
+    filter: blur(18px);
+}
+
+.service-matters__content,
+.service-matters__points {
+    position: relative;
+    z-index: 2;
+}
+
+.service-matters__content p {
+    margin-top: 22px;
+    font-size: clamp(15px, 1.45vw, 18px);
+}
+
+.service-matters__points {
+    display: grid;
+    gap: 14px;
+}
+
+.service-matters__points li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 62px;
+    padding: 16px;
+    border: 1px solid var(--border-soft);
+    border-radius: 20px;
+    color: var(--color-text-soft);
+    font-size: 14px;
+    font-weight: 800;
+    background: rgba(255, 255, 255, 0.045);
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        background var(--transition-base),
+        color var(--transition-base);
+}
+
+.service-matters__points li:hover {
+    transform: translateX(5px);
+    color: #ffffff;
+    border-color: var(--border-glow);
+    background: rgba(255, 255, 255, 0.075);
+}
+
+.service-matters__points svg {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 auto;
+    color: var(--color-accent-peach);
+}
+
+/* ==================================================
+   06. RKJ Method / Approach
+   ================================================== */
+
+.service-method {
+    position: relative;
+}
+
+.service-method__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.service-method-card {
+    min-height: 250px;
+    padding: 24px;
+}
+
+.service-method-card__number {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    margin-bottom: 34px;
+    color: transparent;
+    font-family: var(--font-heading);
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.07em;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.service-method-card h3,
+.service-method-card p {
+    position: relative;
+    z-index: 2;
+}
+
+.service-method-card p {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+/* ==================================================
+   07. Process Timeline
+   ================================================== */
+
+.service-process {
+    position: relative;
+}
+
+.service-process__timeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.service-process__timeline::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    left: 8%;
+    z-index: -1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 94, 188, 0.48), transparent);
+}
+
+.service-process-step {
+    display: grid;
+    align-content: start;
+    min-height: 190px;
+    padding: 24px;
+}
+
+.service-process-step span {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 28px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 800;
+    background: var(--gradient-main);
+    box-shadow: 0 18px 44px rgba(255, 94, 188, 0.22);
+}
+
+.service-process-step h3 {
+    position: relative;
+    z-index: 2;
+    font-size: 20px;
+}
+
+/* ==================================================
+   08. Benefits / Feature Grid
+   ================================================== */
+
+.service-benefits {
+    position: relative;
+}
+
+.service-benefits::after {
+    content: "";
+    position: absolute;
+    left: -170px;
+    bottom: 10%;
+    z-index: -1;
+    width: 440px;
+    height: 440px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 94, 188, 0.16), transparent 72%);
+    filter: blur(20px);
+}
+
+.service-benefits__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.service-benefit-card {
+    min-height: 260px;
+    padding: 24px;
+}
+
+.service-benefit-card .icon-badge,
+.service-benefit-card h3,
+.service-benefit-card p {
+    position: relative;
+    z-index: 2;
+}
+
+.service-benefit-card h3 {
+    margin-top: 26px;
+}
+
+.service-benefit-card p {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+/* ==================================================
+   09. FAQ
+   ================================================== */
+
+.service-faq {
+    position: relative;
+}
+
+.service-faq__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.62fr) minmax(0, 1fr);
+    gap: clamp(28px, 5vw, 72px);
+    align-items: start;
+}
+
+.service-faq__intro {
+    position: sticky;
+    top: calc(var(--header-height) + 34px);
+}
+
+.service-faq__intro p {
+    margin-top: 20px;
+    font-size: clamp(15px, 1.35vw, 17px);
+}
+
+.service-faq__list {
+    display: grid;
+    gap: 12px;
+}
+
+.faq-item {
+    overflow: hidden;
+    border: 1px solid var(--border-soft);
+    border-radius: 22px;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.064), rgba(255, 255, 255, 0.028)),
+        rgba(255, 255, 255, 0.035);
+    transition:
+        border-color var(--transition-base),
+        background var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.faq-item:hover {
+    border-color: rgba(255, 94, 188, 0.28);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.078), rgba(255, 255, 255, 0.035)),
+        rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 54px rgba(0, 0, 0, 0.18);
+}
+
+.faq-item__button {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 18px;
+    align-items: center;
+    width: 100%;
+    padding: 20px 22px;
+    color: #ffffff;
+    text-align: left;
+    background: transparent;
+}
+
+.faq-item__button span {
+    font-family: var(--font-heading);
+    font-size: clamp(16px, 1.5vw, 20px);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.03em;
+}
+
+.faq-item__button svg {
+    width: 20px;
+    height: 20px;
+    color: var(--color-accent-pink);
+    transition: transform var(--transition-base);
+}
+
+.faq-item__button.is-open svg {
+    transform: rotate(45deg);
+}
+
+.faq-item__panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-base);
+}
+
+.faq-item__panel p {
+    padding: 0 22px 22px;
+    color: var(--color-text-soft);
+    font-size: 14px;
+}
+
+/* ==================================================
+   10. CTA / Contact Strip
+   ================================================== */
+
+.service-cta-section {
+    padding-bottom: clamp(86px, 9vw, 132px);
+}
+
+.service-cta {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(30px, 5vw, 56px);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-xl);
+    background:
+        radial-gradient(circle at 12% 0%, rgba(255, 94, 188, 0.22), transparent 42%),
+        radial-gradient(circle at 82% 100%, rgba(255, 173, 138, 0.16), transparent 42%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03)),
+        rgba(18, 8, 34, 0.78);
+    box-shadow: var(--shadow-soft);
+}
+
+.service-cta::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 8%;
+    width: 46%;
+    height: 1px;
+    background: var(--gradient-main);
+    box-shadow: 0 0 28px rgba(255, 94, 188, 0.52);
+}
+
+.service-cta__inner {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: clamp(22px, 4vw, 44px);
+    align-items: center;
+}
+
+.service-cta h2 {
+    max-width: 820px;
+}
+
+.service-cta p {
+    max-width: 760px;
+    margin-top: 18px;
+    font-size: clamp(15px, 1.35vw, 17px);
+}
+
+.service-cta__actions {
+    display: grid;
+    gap: 12px;
+    justify-items: end;
+}
+
+.service-cta__contact {
+    display: grid;
+    gap: 8px;
+    text-align: right;
+}
+
+.service-cta__contact a {
+    color: var(--color-text-soft);
+    font-size: 13px;
+    font-weight: 800;
+    transition: color var(--transition-base);
+}
+
+.service-cta__contact a:hover {
+    color: #ffffff;
+}
+
+/* ==================================================
+   Optional Service Contact Form Block
+   ================================================== */
+
+.service-contact-mini {
+    margin-top: 26px;
+}
+
+.service-contact-mini .form-panel {
+    max-width: 620px;
+}
+
+/* ==================================================
+   Responsive
+   ================================================== */
+
+@media (max-width: 1180px) {
+
+    .service-hero__inner,
+    .service-overview__grid,
+    .service-matters__panel,
+    .service-section__header,
+    .service-faq__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-faq__intro {
+        position: relative;
+        top: auto;
+    }
+
+    .service-manage__grid,
+    .service-benefits__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-method__grid,
+    .service-process__timeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-process__timeline::before {
+        display: none;
+    }
+
+    .service-cta__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .service-cta__actions {
+        justify-items: start;
+    }
+
+    .service-cta__contact {
+        text-align: left;
+    }
+}
+
+@media (max-width: 760px) {
+    .service-hero {
+        min-height: 600px;
+        padding-top: 86px;
+        padding-bottom: 64px;
+    }
+
+    .service-hero__panel {
+        border-radius: 24px;
+    }
+
+    .service-hero__actions {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .service-hero__mini {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .service-overview__content,
+    .service-matters__panel,
+    .service-cta {
+        border-radius: 24px;
+    }
+
+    .service-manage__grid,
+    .service-benefits__grid,
+    .service-method__grid,
+    .service-process__timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .service-manage-card,
+    .service-benefit-card,
+    .service-method-card,
+    .service-process-step,
+    .service-metric {
+        min-height: auto;
+    }
+
+    .faq-item__button {
+        padding: 18px;
+    }
+
+    .faq-item__panel p {
+        padding: 0 18px 18px;
+    }
+}
+
+@media (max-width: 520px) {
+    .service-hero {
+        min-height: 560px;
+    }
+
+    .service-section__header {
+        margin-bottom: 30px;
+    }
+
+    .service-overview__content,
+    .service-matters__panel,
+    .service-cta {
+        padding: 22px;
+    }
+
+    .service-manage-card,
+    .service-benefit-card,
+    .service-method-card,
+    .service-process-step,
+    .service-metric {
+        padding: 20px;
+        border-radius: 22px;
+    }
+
+    .service-matters__points li {
+        align-items: flex-start;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .service-hero,
+    .service-metric,
+    .service-manage-card,
+    .service-benefit-card,
+    .service-method-card,
+    .service-process-step,
+    .faq-item__panel {
+        transition: none !important;
+    }
+}
