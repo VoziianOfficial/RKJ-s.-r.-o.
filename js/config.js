@@ -211,7 +211,7 @@ window.SITE_CONFIG = {
         hero: {
             kicker: "MARKETING AGENCY",
             title:
-                "Digital marketing solutions built to help your business grow smarter.",
+                "Delivering marketing solutions that enable you to work smarter.",
             text:
                 "RKJ s. r. o. helps businesses improve visibility, attract qualified leads, and turn digital channels into measurable growth through paid ads, SEO, social media, web design, and conversion-focused strategy.",
             points: [
@@ -1217,11 +1217,9 @@ window.SITE_CONFIG = {
                 "Location content"
             ],
             hero: {
-                kicker: "Local SEO",
-                heading:
-                    "Local visibility support for businesses that want to be found.",
-                text:
-                    "RKJ s. r. o. helps businesses improve local search presence through local SEO structure, location-based content, profile direction, and visibility planning."
+                kicker: "WEBSITE DEVELOPMENT",
+                title: "Delivering marketing solutions that enable you to work smarter.",
+                text: "At RKJ, we build smart digital marketing systems that help businesses improve visibility, attract qualified leads, and grow through clear strategy."
             },
             overview: {
                 title: "Local SEO support for businesses that depend on area-based visibility.",
