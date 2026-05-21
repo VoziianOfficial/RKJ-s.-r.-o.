@@ -401,3 +401,156 @@
         min-height: auto;
     }
 }
+/* ==================================================
+   Legal Contact List — Clean Compact Version
+   ================================================== */
+
+.legal-contact-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: min(100%, 680px);
+    margin-top: 18px;
+}
+
+.legal-contact-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr) 34px;
+    gap: 12px;
+    align-items: center;
+    min-height: 64px;
+    padding: 10px 12px;
+    overflow: hidden;
+    isolation: isolate;
+    border: 1px solid rgba(255, 255, 255, 0.105);
+    border-radius: 17px;
+    color: rgba(246, 240, 252, 0.86);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.025)),
+        rgba(255, 255, 255, 0.035);
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.055);
+    text-decoration: none;
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        background var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.legal-contact-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 12% 50%, rgba(255, 94, 188, 0.18), transparent 38%),
+        linear-gradient(135deg, rgba(168, 85, 255, 0.1), rgba(255, 94, 188, 0.06));
+    transition: opacity var(--transition-base);
+}
+
+.legal-contact-item:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 94, 188, 0.38);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.035)),
+        rgba(255, 255, 255, 0.055);
+    box-shadow:
+        0 16px 38px rgba(0, 0, 0, 0.18),
+        0 0 24px rgba(255, 94, 188, 0.1);
+}
+
+.legal-contact-item:hover::before {
+    opacity: 1;
+}
+
+.legal-contact-item__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(255, 255, 255, 0.105);
+    border-radius: 13px;
+    color: #ffffff;
+    background:
+        radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.22), transparent 34%),
+        var(--gradient-main);
+    box-shadow:
+        0 12px 26px rgba(255, 94, 188, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.legal-contact-item__icon svg {
+    width: 17px;
+    height: 17px;
+    stroke-width: 2.2;
+}
+
+.legal-contact-item__body {
+    display: grid;
+    gap: 5px;
+    min-width: 0;
+}
+
+.legal-contact-item__label {
+    display: block;
+    color: var(--color-text-muted);
+    font-size: 9.5px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.legal-contact-item__value {
+    display: block;
+    min-width: 0;
+    max-width: 100%;
+    color: #ffffff;
+    font-size: 12.8px;
+    font-weight: 800;
+    line-height: 1.32;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+.legal-contact-item__arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    justify-self: end;
+    border-radius: 50%;
+    color: rgba(246, 240, 252, 0.7);
+    background: rgba(255, 255, 255, 0.055);
+    transition:
+        transform var(--transition-base),
+        color var(--transition-base),
+        background var(--transition-base);
+}
+
+.legal-contact-item__arrow svg {
+    width: 14px;
+    height: 14px;
+}
+
+.legal-contact-item:hover .legal-contact-item__arrow {
+    transform: translate(2px, -2px);
+    color: #ffffff;
+    background: rgba(255, 94, 188, 0.16);
+}
+
+.legal-contact-item__arrow--static {
+    color: var(--color-accent-peach);
+}
+
+.legal-contact-item:hover .legal-contact-item__arrow--static {
+    transform: none;
+}
