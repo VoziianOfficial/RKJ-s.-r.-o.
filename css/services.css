@@ -4648,3 +4648,8 @@ width: 100%;
         border-radius: 14px;
     }
 }
+
+/* Remove top padding only for service CTA section */
+.service-cta-section.section {
+    padding-top: 0 !important;
+}
