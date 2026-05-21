@@ -843,17 +843,23 @@
         if (!mount) return;
 
         mount.innerHTML = items
-            .map(function (item) {
+            .map(function (item, index) {
                 return `
-          <article class="service-manage-card glass-card hover-card">
-            <span class="icon-badge">
-              ${createIcon(item.icon || "sparkles")}
-            </span>
+                <article class="service-manage-row">
+                    <span class="service-manage-row__number">
+                        ${String(index + 1).padStart(2, "0")}
+                    </span>
 
-            <h3>${item.title}</h3>
-            <p>${item.text}</p>
-          </article>
-        `;
+                    <span class="service-manage-row__icon">
+                        ${createIcon(item.icon || "sparkles")}
+                    </span>
+
+                    <div class="service-manage-row__content">
+                        <h3>${item.title}</h3>
+                        <p>${item.text}</p>
+                    </div>
+                </article>
+            `;
             })
             .join("");
     }
