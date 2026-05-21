@@ -1935,8 +1935,7 @@ width: 100%;
             rgba(6, 0, 18, 0.7) 100%
         ),
         radial-gradient(circle at 18% 28%, rgba(255, 94, 188, 0.22), transparent 34%),
-        radial-gradient(circle at 82% 64%, rgba(168, 85, 255, 0.2), transparent 38%),
-        var(--service-process-image) center / cover no-repeat;
+        radial-gradient(circle at 82% 64%, rgba(168, 85, 255, 0.2), transparent 38%);
 }
 
 .service-process.service-section::before {
@@ -2156,8 +2155,7 @@ width: 100%;
             rgba(6, 0, 18, 0.54) 46%,
             rgba(6, 0, 18, 0.72) 100%),
         radial-gradient(circle at 18% 28%, rgba(255, 94, 188, 0.22), transparent 34%),
-        radial-gradient(circle at 82% 64%, rgba(168, 85, 255, 0.2), transparent 38%),
-        var(--service-process-image) center / cover no-repeat;
+        radial-gradient(circle at 82% 64%, rgba(168, 85, 255, 0.2), transparent 38%);
 }
 
 .service-process.service-section::before {
@@ -2457,8 +2455,7 @@ width: 100%;
                 rgba(6, 0, 18, 0.58) 50%,
                 rgba(6, 0, 18, 0.84) 100%),
             radial-gradient(circle at 20% 28%, rgba(255, 94, 188, 0.2), transparent 34%),
-            radial-gradient(circle at 78% 62%, rgba(168, 85, 255, 0.2), transparent 38%),
-            var(--service-process-image) center / cover no-repeat;
+            radial-gradient(circle at 78% 62%, rgba(168, 85, 255, 0.2), transparent 38%);
     }
 
     .service-process .container-wide {
@@ -2735,8 +2732,7 @@ width: 100%;
                 rgba(6, 0, 18, 0.58) 50%,
                 rgba(6, 0, 18, 0.84) 100%),
             radial-gradient(circle at 20% 28%, rgba(255, 94, 188, 0.2), transparent 34%),
-            radial-gradient(circle at 78% 62%, rgba(168, 85, 255, 0.2), transparent 38%),
-            var(--service-process-image) center / cover no-repeat;
+            radial-gradient(circle at 78% 62%, rgba(168, 85, 255, 0.2), transparent 38%);
     }
 
     .service-process .container-wide {
