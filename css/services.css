@@ -1910,3 +1910,1147 @@ width: 100%;
         font-size: 16px;
     }
 }
+
+/* ==================================================
+   Service Process — Cinematic Horizontal Process
+   ================================================== */
+
+.service-process.service-section {
+    position: relative;
+    overflow: hidden;
+    min-height: clamp(520px, 58vw, 720px);
+    display: flex;
+    align-items: center;
+    padding-top: clamp(56px, 6vw, 96px);
+    padding-bottom: clamp(56px, 6vw, 96px);
+    isolation: isolate;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(6, 0, 18, 0.84) 0%,
+            rgba(6, 0, 18, 0.58) 48%,
+            rgba(6, 0, 18, 0.9) 100%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(6, 0, 18, 0.9) 0%,
+            rgba(6, 0, 18, 0.54) 42%,
+            rgba(6, 0, 18, 0.7) 100%
+        ),
+        radial-gradient(circle at 18% 28%, rgba(255, 94, 188, 0.22), transparent 34%),
+        radial-gradient(circle at 82% 64%, rgba(168, 85, 255, 0.2), transparent 38%),
+        var(--service-process-image) center / cover no-repeat;
+}
+
+.service-process.service-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.014) 1px, transparent 1px);
+    background-size: 58px 58px;
+    opacity: 0.28;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 88%);
+}
+
+.service-process.service-section::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    z-index: -1;
+    height: 38%;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent, rgba(6, 0, 18, 0.95));
+}
+
+.service-process .container-wide {
+    position: relative;
+    z-index: 2;
+    width: min(100% - 32px, var(--container-wide));
+    margin-inline: auto;
+}
+
+/* Header */
+
+.service-process__header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.55fr);
+    gap: clamp(28px, 5vw, 82px);
+    align-items: end;
+    width: 100%;
+}
+
+.service-process__header h2 {
+    max-width: 980px;
+    color: #ffffff;
+    font-size: clamp(38px, 5.6vw, 78px);
+    line-height: 0.98;
+    letter-spacing: -0.07em;
+}
+
+.service-process__header p {
+    max-width: 620px;
+    color: rgba(246, 240, 252, 0.8);
+    font-size: clamp(15px, 1.35vw, 18px);
+    line-height: 1.72;
+}
+
+/* Process line */
+
+.service-process__track {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    margin-top: clamp(54px, 7vw, 94px);
+    padding-top: 34px;
+}
+
+.service-process__track::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 94, 188, 0.08),
+            rgba(255, 94, 188, 0.58),
+            rgba(168, 85, 255, 0.52),
+            rgba(255, 173, 138, 0.18)
+        );
+    box-shadow: 0 0 28px rgba(255, 94, 188, 0.34);
+}
+
+.service-process__track::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 18%;
+    height: 4px;
+    border-radius: var(--radius-pill);
+    background: var(--gradient-main);
+    box-shadow: 0 0 28px rgba(255, 94, 188, 0.68);
+    animation: serviceProcessLine 4.8s ease-in-out infinite alternate;
+}
+
+/* Step */
+
+.service-process-step,
+.service-process-step.glass-card,
+.service-process-step.hover-card {
+    position: relative;
+    min-height: auto;
+    padding: 0 24px 0 0;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    transform: none !important;
+}
+
+.service-process-step::before {
+    content: "";
+    position: absolute;
+    top: -31px;
+    left: 0;
+    z-index: 2;
+    width: 23px;
+    height: 23px;
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.4), transparent 34%),
+        var(--gradient-main);
+    box-shadow:
+        0 0 0 8px rgba(255, 94, 188, 0.08),
+        0 0 28px rgba(255, 94, 188, 0.42);
+    transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.service-process-step::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 62%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.service-process-step span {
+    display: inline-flex;
+    margin-bottom: 12px;
+    color: transparent;
+    font-family: var(--font-heading);
+    font-size: clamp(34px, 4vw, 58px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.08em;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.26);
+    transition:
+        transform var(--transition-base),
+        -webkit-text-stroke-color var(--transition-base);
+}
+
+.service-process-step h3 {
+    max-width: 260px;
+    color: rgba(246, 240, 252, 0.86);
+    font-size: clamp(18px, 1.8vw, 25px);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+    transition: color var(--transition-base);
+}
+
+.service-process-step:hover::before {
+    transform: scale(1.16);
+    box-shadow:
+        0 0 0 10px rgba(255, 94, 188, 0.1),
+        0 0 36px rgba(255, 94, 188, 0.65);
+}
+
+.service-process-step:hover span {
+    transform: translateY(-3px);
+    -webkit-text-stroke-color: rgba(255, 94, 188, 0.78);
+}
+
+.service-process-step:hover h3 {
+    color: #ffffff;
+}
+
+@keyframes serviceProcessLine {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(455%);
+    }
+}
+/* ==================================================
+   Service Process — Final Clean Header + Number Circles
+   ================================================== */
+
+.service-process.service-section {
+    position: relative;
+    overflow: hidden;
+    min-height: clamp(500px, 55vw, 680px);
+    display: flex;
+    align-items: center;
+    padding-top: clamp(52px, 5.6vw, 86px);
+    padding-bottom: clamp(52px, 5.6vw, 86px);
+    isolation: isolate;
+    background:
+        linear-gradient(180deg,
+            rgba(6, 0, 18, 0.84) 0%,
+            rgba(6, 0, 18, 0.56) 48%,
+            rgba(6, 0, 18, 0.92) 100%),
+        linear-gradient(90deg,
+            rgba(6, 0, 18, 0.9) 0%,
+            rgba(6, 0, 18, 0.54) 46%,
+            rgba(6, 0, 18, 0.72) 100%),
+        radial-gradient(circle at 18% 28%, rgba(255, 94, 188, 0.22), transparent 34%),
+        radial-gradient(circle at 82% 64%, rgba(168, 85, 255, 0.2), transparent 38%),
+        var(--service-process-image) center / cover no-repeat;
+}
+
+.service-process.service-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.014) 1px, transparent 1px);
+    background-size: 58px 58px;
+    opacity: 0.28;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 88%);
+}
+
+.service-process.service-section::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    z-index: -1;
+    height: 40%;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent, rgba(6, 0, 18, 0.96));
+}
+
+.service-process .container-wide {
+    position: relative;
+    z-index: 2;
+    width: min(100% - 32px, var(--container-wide));
+    margin-inline: auto;
+}
+
+/* Header — более ровный и широкий */
+
+.service-process__header {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr);
+    column-gap: clamp(32px, 6vw, 96px);
+    row-gap: 16px;
+    align-items: end;
+    width: 100%;
+    margin-bottom: clamp(48px, 6vw, 78px);
+}
+
+.service-process__header .section-kicker {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+.service-process__header h2 {
+    max-width: 980px;
+    color: #ffffff;
+    font-size: clamp(38px, 5.4vw, 76px);
+    line-height: 0.98;
+    letter-spacing: -0.07em;
+    text-wrap: balance;
+}
+
+.service-process__header p {
+    max-width: 640px;
+    margin: 0;
+    padding-bottom: clamp(4px, 1vw, 10px);
+    color: rgba(246, 240, 252, 0.82);
+    font-size: clamp(15px, 1.28vw, 18px);
+    line-height: 1.72;
+}
+
+/* Track */
+
+.service-process__track,
+.service-process__timeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(18px, 3vw, 34px);
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* общая линия */
+.service-process__track::before,
+.service-process__timeline::before {
+    content: "";
+    position: absolute;
+    top: 27px;
+    left: 27px;
+    right: 27px;
+    z-index: 0;
+    height: 1px;
+    background:
+        linear-gradient(90deg,
+            rgba(255, 94, 188, 0.08),
+            rgba(255, 94, 188, 0.58),
+            rgba(168, 85, 255, 0.52),
+            rgba(255, 173, 138, 0.2));
+    box-shadow: 0 0 28px rgba(255, 94, 188, 0.34);
+}
+
+/* бегущий свет */
+.service-process__track::after,
+.service-process__timeline::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 27px;
+    z-index: 1;
+    width: 18%;
+    height: 4px;
+    border-radius: var(--radius-pill);
+    background: var(--gradient-main);
+    box-shadow: 0 0 28px rgba(255, 94, 188, 0.68);
+    animation: serviceProcessLine 4.8s ease-in-out infinite alternate;
+}
+
+/* Step reset: убираем карточность */
+
+.service-process-step,
+.service-process-step.glass-card,
+.service-process-step.hover-card {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    justify-items: start;
+    align-content: start;
+    min-height: auto;
+    padding: 0;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    text-align: left;
+    transform: none !important;
+}
+
+/* старые псевдо-кружки отключаем, чтобы не конфликтовали */
+.service-process-step::before,
+.service-process-step::after,
+.service-process-step.glass-card::before,
+.service-process-step.hover-card::before {
+    display: none !important;
+}
+
+/* цифра теперь внутри нормального кружочка */
+
+.service-process-step>span {
+    position: relative;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    margin: 0 0 18px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 50%;
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    background:
+        radial-gradient(circle at 32% 22%, rgba(255, 255, 255, 0.26), transparent 34%),
+        linear-gradient(135deg, rgba(168, 85, 255, 0.96), rgba(255, 94, 188, 0.96) 62%, rgba(255, 173, 138, 0.9));
+    box-shadow:
+        0 0 0 8px rgba(255, 94, 188, 0.07),
+        0 18px 42px rgba(255, 94, 188, 0.24),
+        inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base),
+        filter var(--transition-base);
+}
+
+.service-process-step h3 {
+    max-width: 280px;
+    color: rgba(246, 240, 252, 0.86);
+    font-size: clamp(18px, 1.8vw, 25px);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+    transition:
+        color var(--transition-base),
+        transform var(--transition-base);
+}
+
+.service-process-step:hover>span {
+    transform: translateY(-5px) scale(1.06);
+    filter: brightness(1.08);
+    box-shadow:
+        0 0 0 10px rgba(255, 94, 188, 0.1),
+        0 22px 48px rgba(255, 94, 188, 0.34),
+        0 0 38px rgba(168, 85, 255, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.26);
+}
+
+.service-process-step:hover h3 {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+@keyframes serviceProcessLine {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(455%);
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 980px) {
+    .service-process.service-section {
+        min-height: auto;
+        padding-top: clamp(42px, 6vw, 62px);
+        padding-bottom: clamp(42px, 6vw, 62px);
+        background-position: center;
+    }
+
+    .service-process .container-wide {
+        width: min(100% - 28px, var(--container-wide));
+    }
+
+    .service-process__header {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+
+    .service-process__header h2 {
+        max-width: 860px;
+        font-size: clamp(34px, 7vw, 58px);
+        line-height: 1.02;
+    }
+
+    .service-process__header p {
+        max-width: 760px;
+        padding-bottom: 0;
+        font-size: 15px;
+        line-height: 1.68;
+    }
+
+    .service-process__track,
+    .service-process__timeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 34px 28px;
+    }
+
+    .service-process__track::before,
+    .service-process__track::after,
+    .service-process__timeline::before,
+    .service-process__timeline::after {
+        display: none;
+    }
+
+    .service-process-step {
+        display: grid;
+        grid-template-columns: 54px minmax(0, 1fr);
+        gap: 16px;
+        align-items: center;
+        padding: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.11) !important;
+        border-radius: 22px !important;
+        background:
+            linear-gradient(135deg, rgba(6, 0, 18, 0.52), rgba(6, 0, 18, 0.28)),
+            rgba(255, 255, 255, 0.035) !important;
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+    }
+
+    .service-process-step>span {
+        margin: 0;
+    }
+
+    .service-process-step h3 {
+        max-width: none;
+        font-size: 20px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 680px) {
+    .service-process.service-section {
+        padding-top: 36px;
+        padding-bottom: 40px;
+        background:
+            linear-gradient(180deg,
+                rgba(6, 0, 18, 0.86) 0%,
+                rgba(6, 0, 18, 0.64) 48%,
+                rgba(6, 0, 18, 0.94) 100%),
+            linear-gradient(90deg,
+                rgba(6, 0, 18, 0.88) 0%,
+                rgba(6, 0, 18, 0.58) 50%,
+                rgba(6, 0, 18, 0.84) 100%),
+            radial-gradient(circle at 20% 28%, rgba(255, 94, 188, 0.2), transparent 34%),
+            radial-gradient(circle at 78% 62%, rgba(168, 85, 255, 0.2), transparent 38%),
+            var(--service-process-image) center / cover no-repeat;
+    }
+
+    .service-process .container-wide {
+        width: min(100% - 22px, var(--container-wide));
+    }
+
+    .service-process.service-section::before {
+        background-size: 42px 42px;
+        opacity: 0.2;
+    }
+
+    .service-process__header {
+        margin-bottom: 28px;
+    }
+
+    .service-process__header h2 {
+        max-width: 100%;
+        font-size: clamp(30px, 9.4vw, 42px);
+        line-height: 1.04;
+        letter-spacing: -0.058em;
+    }
+
+    .service-process__header p {
+        max-width: 100%;
+        font-size: 13.5px;
+        line-height: 1.65;
+    }
+
+    .service-process__track,
+    .service-process__timeline {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .service-process-step {
+        grid-template-columns: 48px minmax(0, 1fr);
+        gap: 14px;
+        min-height: 74px;
+        padding: 13px 14px;
+        border-radius: 18px !important;
+    }
+
+    .service-process-step>span {
+        width: 46px;
+        height: 46px;
+        font-size: 13px;
+        box-shadow:
+            0 0 0 6px rgba(255, 94, 188, 0.07),
+            0 14px 32px rgba(255, 94, 188, 0.22),
+            inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    }
+
+    .service-process-step h3 {
+        font-size: 18px;
+        line-height: 1.18;
+    }
+
+    .service-process-step:hover>span {
+        transform: translateY(-2px) scale(1.03);
+    }
+
+    .service-process-step:hover h3 {
+        transform: none;
+    }
+}
+
+/* Small mobile */
+
+@media (max-width: 430px) {
+    .service-process.service-section {
+        padding-top: 32px;
+        padding-bottom: 36px;
+    }
+
+    .service-process .container-wide {
+        width: min(100% - 18px, var(--container-wide));
+    }
+
+    .service-process-step {
+        grid-template-columns: 42px minmax(0, 1fr);
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .service-process-step>span {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .service-process-step h3 {
+        font-size: 16.5px;
+    }
+}
+
+/* ==================================================
+   Service Process — Bigger Transparent Header Visual
+   ================================================== */
+
+.service-process__header {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(440px, 0.75fr);
+    column-gap: clamp(30px, 5vw, 86px);
+    row-gap: 18px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: clamp(44px, 6vw, 74px);
+}
+
+.service-process__header .section-kicker {
+    grid-column: 1 / -1;
+}
+
+.service-process__header h2 {
+    max-width: 980px;
+    color: #ffffff;
+    font-size: clamp(38px, 5.4vw, 76px);
+    line-height: 0.98;
+    letter-spacing: -0.07em;
+    text-wrap: balance;
+}
+
+/* убираем фон/карточку у визуала */
+.service-process__header-media {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    min-height: clamp(300px, 30vw, 460px);
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    isolation: isolate;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* сама картинка больше, но не ломает блок */
+.service-process__header-media img {
+    position: relative !important;
+    inset: auto !important;
+    z-index: 2;
+    display: block;
+    width: min(100%, 620px);
+    max-width: none;
+    height: auto;
+    max-height: clamp(300px, 32vw, 480px);
+    object-fit: contain;
+    object-position: center;
+    transform: translateY(0) scale(1);
+    filter:
+        drop-shadow(0 30px 52px rgba(0, 0, 0, 0.42)) drop-shadow(0 0 34px rgba(255, 94, 188, 0.22)) drop-shadow(0 0 42px rgba(168, 85, 255, 0.16));
+    transition:
+        transform 800ms ease,
+        filter 800ms ease;
+}
+
+.service-process__header-media::before,
+.service-process__header-media::after,
+.service-process__header-media figcaption {
+    display: none !important;
+}
+
+.service-process__header-media:hover img {
+    transform: translateY(-8px) scale(1.035);
+    filter:
+        drop-shadow(0 36px 62px rgba(0, 0, 0, 0.48)) drop-shadow(0 0 42px rgba(255, 94, 188, 0.32)) drop-shadow(0 0 52px rgba(168, 85, 255, 0.22));
+}
+
+/* ==================================================
+   Service Process — Tablet Adaptation
+   ================================================== */
+
+@media (max-width: 980px) {
+    .service-process.service-section {
+        min-height: auto;
+        padding-top: clamp(42px, 6vw, 64px);
+        padding-bottom: clamp(42px, 6vw, 64px);
+        background-position: center;
+    }
+
+    .service-process .container-wide {
+        width: min(100% - 28px, var(--container-wide));
+    }
+
+    .service-process__header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 24px;
+        margin-bottom: 38px;
+        text-align: center;
+    }
+
+    .service-process__header .section-kicker {
+        justify-self: center;
+    }
+
+    .service-process__header h2 {
+        max-width: 860px;
+        margin-inline: auto;
+        font-size: clamp(34px, 7vw, 58px);
+        line-height: 1.02;
+    }
+
+    .service-process__header-media {
+        width: min(100%, 680px);
+        min-height: clamp(280px, 42vw, 380px);
+    }
+
+    .service-process__header-media img {
+        width: min(100%, 620px);
+        max-height: clamp(280px, 42vw, 390px);
+    }
+
+    .service-process__track,
+    .service-process__timeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .service-process__track::before,
+    .service-process__track::after,
+    .service-process__timeline::before,
+    .service-process__timeline::after {
+        display: none;
+    }
+
+    .service-process-step {
+        display: grid;
+        grid-template-columns: 54px minmax(0, 1fr);
+        gap: 16px;
+        align-items: center;
+        padding: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.11) !important;
+        border-radius: 22px !important;
+        background:
+            linear-gradient(135deg, rgba(6, 0, 18, 0.52), rgba(6, 0, 18, 0.28)),
+            rgba(255, 255, 255, 0.035) !important;
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+    }
+
+    .service-process-step>span {
+        margin: 0;
+    }
+
+    .service-process-step h3 {
+        max-width: none;
+        font-size: 20px;
+    }
+}
+
+/* ==================================================
+   Service Process — Mobile Adaptation
+   ================================================== */
+
+@media (max-width: 680px) {
+    .service-process.service-section {
+        padding-top: 36px;
+        padding-bottom: 40px;
+        background:
+            linear-gradient(180deg,
+                rgba(6, 0, 18, 0.88) 0%,
+                rgba(6, 0, 18, 0.64) 48%,
+                rgba(6, 0, 18, 0.94) 100%),
+            linear-gradient(90deg,
+                rgba(6, 0, 18, 0.88) 0%,
+                rgba(6, 0, 18, 0.58) 50%,
+                rgba(6, 0, 18, 0.84) 100%),
+            radial-gradient(circle at 20% 28%, rgba(255, 94, 188, 0.2), transparent 34%),
+            radial-gradient(circle at 78% 62%, rgba(168, 85, 255, 0.2), transparent 38%),
+            var(--service-process-image) center / cover no-repeat;
+    }
+
+    .service-process .container-wide {
+        width: min(100% - 22px, var(--container-wide));
+    }
+
+    .service-process.service-section::before {
+        background-size: 42px 42px;
+        opacity: 0.2;
+    }
+
+    .service-process__header {
+        gap: 18px;
+        margin-bottom: 28px;
+        text-align: center;
+    }
+
+    .service-process__header h2 {
+        max-width: 100%;
+        font-size: clamp(30px, 9.4vw, 42px);
+        line-height: 1.04;
+        letter-spacing: -0.058em;
+    }
+
+    .service-process__header-media {
+        width: min(100%, 420px);
+        min-height: 220px;
+    }
+
+    .service-process__header-media img {
+        width: min(112%, 420px);
+        max-height: 240px;
+    }
+
+    .service-process__track,
+    .service-process__timeline {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .service-process-step {
+        grid-template-columns: 48px minmax(0, 1fr);
+        gap: 14px;
+        min-height: 74px;
+        padding: 13px 14px;
+        border-radius: 18px !important;
+    }
+
+    .service-process-step>span {
+        width: 46px;
+        height: 46px;
+        font-size: 13px;
+    }
+
+    .service-process-step h3 {
+        font-size: 18px;
+        line-height: 1.18;
+    }
+}
+
+@media (max-width: 430px) {
+    .service-process.service-section {
+        padding-top: 32px;
+        padding-bottom: 36px;
+    }
+
+    .service-process .container-wide {
+        width: min(100% - 18px, var(--container-wide));
+    }
+
+    .service-process__header-media {
+        min-height: 190px;
+    }
+
+    .service-process__header-media img {
+        width: min(118%, 380px);
+        max-height: 210px;
+    }
+
+    .service-process-step {
+        grid-template-columns: 42px minmax(0, 1fr);
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .service-process-step>span {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .service-process-step h3 {
+        font-size: 16.5px;
+    }
+}
+
+/* ==================================================
+   Service Process — Fix Hover Clipping + Better Mobile Track
+   ================================================== */
+
+/* чтобы круги/иконки не обрезались при hover */
+.service-process__track,
+.service-process__timeline {
+    overflow: visible !important;
+}
+
+.service-process-step,
+.service-process-step.glass-card,
+.service-process-step.hover-card {
+    overflow: visible !important;
+    isolation: visible;
+}
+
+/* убираем конфликт старых hover-card эффектов */
+.service-process-step.hover-card:hover,
+.service-process-step.glass-card:hover {
+    transform: none !important;
+}
+
+/* desktop/tablet: даем воздуху вокруг circle */
+.service-process-step>span {
+    flex: 0 0 auto;
+    overflow: visible;
+}
+
+/* фикс, чтобы glow не резался */
+.service-process-step>span::before,
+.service-process-step>span::after {
+    pointer-events: none;
+}
+
+/* ==================================================
+   Tablet — clean 2-column blocks
+   ================================================== */
+
+@media (max-width: 980px) {
+
+    .service-process__track,
+    .service-process__timeline {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        overflow: visible !important;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .service-process-step,
+    .service-process-step.glass-card,
+    .service-process-step.hover-card {
+        position: relative;
+        display: grid;
+        grid-template-columns: 54px minmax(0, 1fr);
+        gap: 16px;
+        align-items: center;
+        min-height: 88px;
+        overflow: visible !important;
+        padding: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.11) !important;
+        border-radius: 22px !important;
+        background:
+            linear-gradient(135deg, rgba(6, 0, 18, 0.56), rgba(6, 0, 18, 0.3)),
+            rgba(255, 255, 255, 0.035) !important;
+        box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18) !important;
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+    }
+
+    .service-process-step>span {
+        width: 54px;
+        height: 54px;
+        margin: 0;
+    }
+
+    .service-process-step h3 {
+        max-width: none;
+        font-size: 20px;
+        line-height: 1.15;
+    }
+
+    .service-process-step:hover>span {
+        transform: translateY(-3px) scale(1.05);
+    }
+}
+
+/* ==================================================
+   Mobile — redesign track as vertical premium list
+   ================================================== */
+
+@media (max-width: 680px) {
+
+    .service-process__track,
+    .service-process__timeline {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-top: 4px;
+        padding: 0;
+        overflow: visible !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    /* вертикальная линия слева */
+    .service-process__track::before,
+    .service-process__timeline::before {
+        content: "";
+        display: block !important;
+        position: absolute;
+        top: 28px;
+        bottom: 28px;
+        left: 23px;
+        width: 1px;
+        height: auto;
+        background:
+            linear-gradient(180deg,
+                rgba(255, 94, 188, 0.08),
+                rgba(255, 94, 188, 0.52),
+                rgba(168, 85, 255, 0.42),
+                rgba(255, 173, 138, 0.12));
+        box-shadow: 0 0 20px rgba(255, 94, 188, 0.26);
+    }
+
+    /* убираем бегущую горизонтальную линию на мобилке */
+    .service-process__track::after,
+    .service-process__timeline::after {
+        display: none !important;
+    }
+
+    .service-process-step,
+    .service-process-step.glass-card,
+    .service-process-step.hover-card {
+        display: grid;
+        grid-template-columns: 48px minmax(0, 1fr);
+        gap: 14px;
+        align-items: start;
+        min-height: auto;
+        overflow: visible !important;
+        padding: 18px 0;
+        border: 0 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+
+    .service-process-step:last-child {
+        border-bottom: 0 !important;
+    }
+
+    .service-process-step>span {
+        position: relative;
+        z-index: 2;
+        width: 46px;
+        height: 46px;
+        margin: 0;
+        font-size: 13px;
+        box-shadow:
+            0 0 0 6px rgba(255, 94, 188, 0.08),
+            0 14px 30px rgba(255, 94, 188, 0.22),
+            inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    }
+
+    .service-process-step h3 {
+        max-width: none;
+        padding-top: 10px;
+        font-size: 18px;
+        line-height: 1.18;
+    }
+
+    .service-process-step:hover>span {
+        transform: scale(1.04);
+        box-shadow:
+            0 0 0 7px rgba(255, 94, 188, 0.1),
+            0 16px 34px rgba(255, 94, 188, 0.28),
+            0 0 28px rgba(168, 85, 255, 0.18),
+            inset 0 1px 0 rgba(255, 255, 255, 0.24);
+    }
+
+    .service-process-step:hover h3 {
+        transform: none;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 430px) {
+
+    .service-process__track::before,
+    .service-process__timeline::before {
+        left: 20px;
+    }
+
+    .service-process-step,
+    .service-process-step.glass-card,
+    .service-process-step.hover-card {
+        grid-template-columns: 42px minmax(0, 1fr);
+        gap: 12px;
+        padding: 16px 0;
+    }
+
+    .service-process-step>span {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .service-process-step h3 {
+        padding-top: 8px;
+        font-size: 16.5px;
+    }
+}
