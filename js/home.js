@@ -27,7 +27,8 @@
         initServicesDropdown();
         initMobileMenu();
         initPolicyBanner();
-        initContactForms();
+      initContactForms();
+      initHomeFaqAccordion();
         initSmoothAnchors();
       initLucideIcons();
       initTestimonialsSwiper();
@@ -1101,6 +1102,72 @@
       `;
         });
     }
+  
+  function initHomeFaqAccordion() {
+    const faq = document.querySelector("[data-home-faq]");
+    if (!faq) return;
+
+    const items = Array.from(faq.querySelectorAll(".home-faq__item"));
+
+    function closeItem(item) {
+      const button = item.querySelector(".home-faq__button");
+      const answer = item.querySelector(".home-faq__answer");
+
+      item.classList.remove("is-open");
+
+      if (button) {
+        button.setAttribute("aria-expanded", "false");
+      }
+
+      if (answer) {
+        answer.style.maxHeight = "0px";
+      }
+    }
+
+    function openItem(item) {
+      const button = item.querySelector(".home-faq__button");
+      const answer = item.querySelector(".home-faq__answer");
+
+      item.classList.add("is-open");
+
+      if (button) {
+        button.setAttribute("aria-expanded", "true");
+      }
+
+      if (answer) {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
+    }
+
+    items.forEach(function (item) {
+      const button = item.querySelector(".home-faq__button");
+      const answer = item.querySelector(".home-faq__answer");
+
+      if (!button || !answer) return;
+
+      item.classList.remove("is-open");
+      answer.style.maxHeight = "0px";
+      button.setAttribute("aria-expanded", "false");
+
+      button.addEventListener("click", function () {
+        const isOpen = item.classList.contains("is-open");
+
+        items.forEach(closeItem);
+
+        if (!isOpen) {
+          openItem(item);
+        }
+      });
+    });
+
+    window.addEventListener("resize", function () {
+      const openItemElement = faq.querySelector(".home-faq__item.is-open .home-faq__answer");
+
+      if (openItemElement) {
+        openItemElement.style.maxHeight = openItemElement.scrollHeight + "px";
+      }
+    });
+  }
 
     function initContactForms() {
         document.querySelectorAll(selectors.contactForm).forEach(function (form) {
