@@ -4306,3 +4306,345 @@ width: 100%;
         line-height: 1.36;
     }
 }
+
+/* ==================================================
+   Service CTA — Icon Contact Links + Hover Shine
+   ================================================== */
+
+.service-cta {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* блик на карточке */
+.service-cta::after {
+    content: "";
+    position: absolute;
+    top: -120%;
+    left: -44%;
+    z-index: 1;
+    width: 34%;
+    height: 340%;
+    transform: rotate(24deg);
+    opacity: 0;
+    pointer-events: none;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.22),
+            transparent);
+    transition:
+        left 850ms ease,
+        opacity 260ms ease;
+}
+
+.service-cta:hover::after {
+    left: 120%;
+    opacity: 1;
+}
+
+.service-cta__inner {
+    position: relative;
+    z-index: 3;
+}
+
+/* справа кнопка + иконки */
+.service-cta__actions {
+    display: grid;
+    gap: 14px;
+    justify-items: end;
+}
+
+.service-cta__contact {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    text-align: right;
+}
+
+/* круглые иконки */
+.service-cta__contact-icon {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 50%;
+    color: #ffffff;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.035)),
+        rgba(255, 255, 255, 0.045);
+    box-shadow:
+        0 14px 34px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        background var(--transition-base),
+        box-shadow var(--transition-base),
+        color var(--transition-base);
+}
+
+.service-cta__contact-icon::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0;
+    background:
+        radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.34), transparent 32%),
+        var(--gradient-main);
+    transition: opacity var(--transition-base);
+}
+
+.service-cta__contact-icon svg {
+    position: relative;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    stroke-width: 2.2;
+    transition:
+        transform var(--transition-base),
+        filter var(--transition-base);
+}
+
+.service-cta__contact-icon:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 94, 188, 0.48);
+    color: #ffffff;
+    box-shadow:
+        0 18px 42px rgba(255, 94, 188, 0.22),
+        0 0 30px rgba(168, 85, 255, 0.16);
+}
+
+.service-cta__contact-icon:hover::before {
+    opacity: 1;
+}
+
+.service-cta__contact-icon:hover svg {
+    transform: scale(1.08) rotate(-4deg);
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.45));
+}
+
+/* Tablet */
+@media (max-width: 980px) {
+    .service-cta__inner {
+        grid-template-columns: 1fr;
+        gap: 26px;
+    }
+
+    .service-cta__actions {
+        justify-items: start;
+    }
+
+    .service-cta__contact {
+        justify-content: flex-start;
+        text-align: left;
+    }
+}
+
+/* Mobile */
+@media (max-width: 680px) {
+    .service-cta__actions {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .service-cta__actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .service-cta__contact {
+        justify-content: center;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .service-cta__contact-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .service-cta__contact-icon svg {
+        width: 19px;
+        height: 19px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 430px) {
+    .service-cta__contact-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .service-cta__contact-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* ==================================================
+   Service CTA — Compact Contact Actions + Shine
+   ================================================== */
+
+.service-cta {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.service-cta::after {
+    content: "";
+    position: absolute;
+    top: -120%;
+    left: -48%;
+    z-index: 1;
+    width: 34%;
+    height: 340%;
+    transform: rotate(24deg);
+    opacity: 0;
+    pointer-events: none;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
+    transition:
+        left 850ms ease,
+        opacity 260ms ease;
+}
+
+.service-cta:hover::after {
+    left: 120%;
+    opacity: 1;
+}
+
+.service-cta__inner {
+    position: relative;
+    z-index: 3;
+}
+
+.service-cta__actions {
+    display: grid;
+    gap: 12px;
+    justify-items: end;
+}
+
+.service-cta__contact {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+}
+
+.service-cta__contact-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 38px;
+    padding: 0 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 13px;
+    color: rgba(246, 240, 252, 0.82);
+    font-size: 11px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.028)),
+        rgba(255, 255, 255, 0.035);
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition:
+        transform var(--transition-base),
+        color var(--transition-base),
+        border-color var(--transition-base),
+        background var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.service-cta__contact-link::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0;
+    background:
+        radial-gradient(circle at 28% 20%, rgba(255, 255, 255, 0.28), transparent 34%),
+        linear-gradient(135deg, rgba(168, 85, 255, 0.62), rgba(255, 94, 188, 0.62));
+    transition: opacity var(--transition-base);
+}
+
+.service-cta__contact-link svg,
+.service-cta__contact-link span {
+    position: relative;
+    z-index: 2;
+}
+
+.service-cta__contact-link svg {
+    width: 15px;
+    height: 15px;
+    stroke-width: 2.35;
+}
+
+.service-cta__contact-link:hover {
+    transform: translateY(-2px);
+    color: #ffffff;
+    border-color: rgba(255, 94, 188, 0.42);
+    box-shadow:
+        0 16px 34px rgba(255, 94, 188, 0.16),
+        0 0 24px rgba(168, 85, 255, 0.12);
+}
+
+.service-cta__contact-link:hover::before {
+    opacity: 1;
+}
+
+/* Tablet */
+@media (max-width: 980px) {
+    .service-cta__actions {
+        justify-items: start;
+    }
+
+    .service-cta__contact {
+        justify-content: flex-start;
+    }
+}
+
+/* Mobile */
+@media (max-width: 680px) {
+    .service-cta__actions {
+        width: 100%;
+    }
+
+    .service-cta__actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .service-cta__contact {
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .service-cta__contact-link {
+        min-height: 40px;
+        padding: 0 14px;
+        border-radius: 14px;
+    }
+}
