@@ -800,12 +800,6 @@
     }
 
     function injectServiceHero(service) {
-        const heroSection = document.querySelector("[data-service-hero-section]");
-
-        if (heroSection && service.image) {
-            heroSection.style.setProperty("--service-hero-image", `url("${service.image}")`);
-        }
-
         setText("[data-service-kicker]", service.hero?.kicker || service.title);
         setText("[data-service-title]", service.hero?.heading || service.title);
         setText("[data-service-text]", service.hero?.text || service.summary);

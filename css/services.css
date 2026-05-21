@@ -7,20 +7,19 @@
    02. Service Hero
    ================================================== */
 
-.service-hero {
-    position: relative;
-    display: grid;
-    align-items: end;
-    min-height: 680px;
-    overflow: hidden;
-    padding-top: clamp(96px, 9vw, 140px);
-    padding-bottom: clamp(64px, 8vw, 110px);
-    isolation: isolate;
-    background:
-        linear-gradient(90deg, rgba(6, 0, 18, 0.94), rgba(6, 0, 18, 0.58), rgba(6, 0, 18, 0.88)),
-        var(--service-hero-image, none) center / cover no-repeat,
-        linear-gradient(135deg, #090016, #030008);
-}
+	.service-hero {
+	    position: relative;
+	    display: grid;
+	    align-items: end;
+	    min-height: 680px;
+	    overflow: hidden;
+	    padding-top: clamp(96px, 9vw, 140px);
+	    padding-bottom: clamp(64px, 8vw, 110px);
+	    isolation: isolate;
+	    background:
+	        linear-gradient(90deg, rgba(6, 0, 18, 0.94), rgba(6, 0, 18, 0.58), rgba(6, 0, 18, 0.88)),
+	        linear-gradient(135deg, #090016, #030008);
+	}
 
 .service-hero::before {
     content: "";
@@ -798,27 +797,26 @@
    Service Hero — Full Background Center Layout
    ================================================== */
 
-.service-hero {
-    position: relative;
-    min-height: clamp(520px, 68vh, 760px);
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    isolation: isolate;
-    background:
-        linear-gradient(180deg,
-            rgba(6, 0, 18, 0.68) 0%,
-            rgba(6, 0, 18, 0.5) 42%,
-            rgba(6, 0, 18, 0.86) 100%),
-        linear-gradient(90deg,
-            rgba(6, 0, 18, 0.82) 0%,
-            rgba(6, 0, 18, 0.46) 34%,
-            rgba(6, 0, 18, 0.38) 64%,
-            rgba(6, 0, 18, 0.78) 100%),
-        radial-gradient(circle at 24% 32%, rgba(255, 94, 188, 0.22), transparent 36%),
-        radial-gradient(circle at 76% 46%, rgba(168, 85, 255, 0.2), transparent 38%),
-        var(--service-hero-image) center / cover no-repeat;
-}
+	.service-hero {
+	    position: relative;
+	    min-height: clamp(520px, 68vh, 760px);
+	    overflow: hidden;
+	    display: flex;
+	    align-items: center;
+	    isolation: isolate;
+	    background:
+	        linear-gradient(180deg,
+	            rgba(6, 0, 18, 0.68) 0%,
+	            rgba(6, 0, 18, 0.5) 42%,
+	            rgba(6, 0, 18, 0.86) 100%),
+	        linear-gradient(90deg,
+	            rgba(6, 0, 18, 0.82) 0%,
+	            rgba(6, 0, 18, 0.46) 34%,
+	            rgba(6, 0, 18, 0.38) 64%,
+	            rgba(6, 0, 18, 0.78) 100%),
+	        radial-gradient(circle at 24% 32%, rgba(255, 94, 188, 0.22), transparent 36%),
+	        radial-gradient(circle at 76% 46%, rgba(168, 85, 255, 0.2), transparent 38%);
+	}
 
 .service-hero::before {
     content: "";
@@ -1055,21 +1053,20 @@ width: 100%;
     }
 }
 
-@media (max-width: 680px) {
-    .service-hero {
-        background:
-            linear-gradient(180deg,
-                rgba(6, 0, 18, 0.78) 0%,
-                rgba(6, 0, 18, 0.62) 48%,
-                rgba(6, 0, 18, 0.92) 100%),
-            linear-gradient(90deg,
-                rgba(6, 0, 18, 0.82) 0%,
-                rgba(6, 0, 18, 0.54) 50%,
-                rgba(6, 0, 18, 0.82) 100%),
-            radial-gradient(circle at 22% 28%, rgba(255, 94, 188, 0.2), transparent 34%),
-            radial-gradient(circle at 78% 58%, rgba(168, 85, 255, 0.2), transparent 38%),
-            var(--service-hero-image) center / cover no-repeat;
-    }
+	@media (max-width: 680px) {
+	    .service-hero {
+	        background:
+	            linear-gradient(180deg,
+	                rgba(6, 0, 18, 0.78) 0%,
+	                rgba(6, 0, 18, 0.62) 48%,
+	                rgba(6, 0, 18, 0.92) 100%),
+	            linear-gradient(90deg,
+	                rgba(6, 0, 18, 0.82) 0%,
+	                rgba(6, 0, 18, 0.54) 50%,
+	                rgba(6, 0, 18, 0.82) 100%),
+	            radial-gradient(circle at 22% 28%, rgba(255, 94, 188, 0.2), transparent 34%),
+	            radial-gradient(circle at 78% 58%, rgba(168, 85, 255, 0.2), transparent 38%);
+	    }
 
     .service-hero::before {
         background-size: 42px 42px;
