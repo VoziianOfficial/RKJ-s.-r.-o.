@@ -322,7 +322,7 @@ window.SITE_CONFIG = {
                     text:
                         "Prepare campaign structure, messaging, landing direction, tracking, and channel setup.",
                     icon: "rocket",
-                    label: "Go live"
+                    label: "Go live & launch"
                 },
                 {
                     number: "04",
