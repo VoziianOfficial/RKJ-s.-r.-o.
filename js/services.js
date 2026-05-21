@@ -894,14 +894,26 @@
         if (!mount) return;
 
         mount.innerHTML = items
+            .slice(0, 2)
             .map(function (item, index) {
+                const image =
+                    item.image ||
+                    `./assets/images/conversion-boost-method-0${index + 1}.jpg`;
+
                 return `
-          <article class="service-method-card glass-card hover-card">
-            <span class="service-method-card__number">${String(index + 1).padStart(2, "0")}</span>
-            <h3>${item.title}</h3>
-            <p>${item.text}</p>
-          </article>
-        `;
+                <article class="service-method-media">
+                    <img
+                        src="${image}"
+                        alt="${item.alt || item.title || "Digital marketing method visual"}"
+                    />
+
+                    <div class="service-method-media__content">
+                        <span>${String(index + 1).padStart(2, "0")}</span>
+                        <h3>${item.title}</h3>
+                        <p>${item.text}</p>
+                    </div>
+                </article>
+            `;
             })
             .join("");
     }
