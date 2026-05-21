@@ -34,12 +34,27 @@ window.SITE_CONFIG = {
             homeHeroComputer: "./assets/images/home-hero-computer.png",
             homeHeroBg: "./assets/images/home-hero-bg.jpg",
             homeAdvantageBg: "./assets/images/home-advantage-bg.jpg",
+
             googleAdsHero: "./assets/images/google-ads-hero.jpg",
             seoHero: "./assets/images/seo-hero.jpg",
             socialMediaHero: "./assets/images/social-media-hero.jpg",
             webDesignHero: "./assets/images/web-design-hero.jpg",
             conversionBoostHero: "./assets/images/conversion-boost-hero.jpg",
             localSeoHero: "./assets/images/local-seo-hero.jpg",
+
+            googleAdsMethod01: "./assets/images/google-ads-method-01.jpg",
+            googleAdsMethod02: "./assets/images/google-ads-method-02.jpg",
+            seoMethod01: "./assets/images/seo-optimization-method-01.jpg",
+            seoMethod02: "./assets/images/seo-optimization-method-02.jpg",
+            socialMediaMethod01: "./assets/images/social-media-marketing-method-01.jpg",
+            socialMediaMethod02: "./assets/images/social-media-marketing-method-02.jpg",
+            webDesignMethod01: "./assets/images/web-design-method-01.jpg",
+            webDesignMethod02: "./assets/images/web-design-method-02.jpg",
+            conversionBoostMethod01: "./assets/images/conversion-boost-method-01.jpg",
+            conversionBoostMethod02: "./assets/images/conversion-boost-method-02.jpg",
+            localSeoMethod01: "./assets/images/local-seo-method-01.jpg",
+            localSeoMethod02: "./assets/images/local-seo-method-02.jpg",
+
             serviceSection01: "./assets/images/service-section-01.jpg",
             serviceSection02: "./assets/images/service-section-02.jpg"
         }
@@ -186,7 +201,7 @@ window.SITE_CONFIG = {
                 "Conversion-focused strategy by RKJ s. r. o. for improving landing pages, calls-to-action, forms, messaging, user flow, and tracking direction."
         },
         "local-seo.html": {
-            title: "Local SEO  | RKJ s. r. o.",
+            title: "Local SEO | RKJ s. r. o.",
             description:
                 "Local SEO support by RKJ s. r. o. for businesses that want clearer local visibility through profile direction, local keyword planning, and location-based content structure."
         },
@@ -515,11 +530,15 @@ window.SITE_CONFIG = {
             method: [
                 {
                     title: "Understand goals",
-                    text: "Clarify business objectives, audience needs, and conversion priorities."
+                    text: "Clarify business objectives, audience needs, and conversion priorities.",
+                    image: "./assets/images/google-ads-method-01.jpg",
+                    alt: "Google Ads planning dashboard and paid campaign strategy workspace"
                 },
                 {
                     title: "Build the structure",
-                    text: "Plan campaigns, keywords, landing direction, and tracking needs."
+                    text: "Plan campaigns, keywords, landing direction, and tracking needs.",
+                    image: "./assets/images/google-ads-method-02.jpg",
+                    alt: "Paid advertising campaign structure and keyword planning dashboard"
                 },
                 {
                     title: "Launch carefully",
@@ -673,11 +692,15 @@ window.SITE_CONFIG = {
             method: [
                 {
                     title: "Audit the current site",
-                    text: "Review structure, metadata, content clarity, and technical signals."
+                    text: "Review structure, metadata, content clarity, and technical signals.",
+                    image: "./assets/images/seo-optimization-method-01.jpg",
+                    alt: "SEO audit dashboard with search visibility and website structure analysis"
                 },
                 {
                     title: "Map search intent",
-                    text: "Connect pages and topics with practical keyword opportunities."
+                    text: "Connect pages and topics with practical keyword opportunities.",
+                    image: "./assets/images/seo-optimization-method-02.jpg",
+                    alt: "Keyword mapping and organic search strategy workspace"
                 },
                 {
                     title: "Improve the pages",
@@ -831,11 +854,15 @@ window.SITE_CONFIG = {
             method: [
                 {
                     title: "Review the brand",
-                    text: "Understand voice, audience, current channels, and business priorities."
+                    text: "Understand voice, audience, current channels, and business priorities.",
+                    image: "./assets/images/social-media-marketing-method-01.jpg",
+                    alt: "Social media brand planning with content calendar and campaign visuals"
                 },
                 {
                     title: "Plan content themes",
-                    text: "Create content direction that supports visibility and trust."
+                    text: "Create content direction that supports visibility and trust.",
+                    image: "./assets/images/social-media-marketing-method-02.jpg",
+                    alt: "Social content strategy dashboard with audience engagement planning"
                 },
                 {
                     title: "Shape campaign ideas",
@@ -989,11 +1016,15 @@ window.SITE_CONFIG = {
             method: [
                 {
                     title: "Plan the structure",
-                    text: "Define pages, sections, calls-to-action, and user journey."
+                    text: "Define pages, sections, calls-to-action, and user journey.",
+                    image: "./assets/images/web-design-method-01.jpg",
+                    alt: "Modern website structure planning with UX wireframes and layout design"
                 },
                 {
                     title: "Shape visual direction",
-                    text: "Create a premium interface direction that matches the business."
+                    text: "Create a premium interface direction that matches the business.",
+                    image: "./assets/images/web-design-method-02.jpg",
+                    alt: "Premium web design interface with responsive layout and UI components"
                 },
                 {
                     title: "Design responsively",
@@ -1147,11 +1178,15 @@ window.SITE_CONFIG = {
             method: [
                 {
                     title: "Review the journey",
-                    text: "Look at page flow, message clarity, forms, and calls-to-action."
+                    text: "Look at page flow, message clarity, forms, and calls-to-action.",
+                    image: "./assets/images/conversion-boost-method-01.jpg",
+                    alt: "Conversion journey review with landing page and customer action analysis"
                 },
                 {
                     title: "Find friction",
-                    text: "Identify points that may confuse visitors or reduce action."
+                    text: "Identify points that may confuse visitors or reduce action.",
+                    image: "./assets/images/conversion-boost-method-02.jpg",
+                    alt: "Conversion analytics dashboard showing user flow and optimization signals"
                 },
                 {
                     title: "Improve key elements",
@@ -1234,9 +1269,11 @@ window.SITE_CONFIG = {
                 "Location content"
             ],
             hero: {
-                kicker: "WEBSITE DEVELOPMENT",
-                title: "Delivering marketing solutions that enable you to work smarter.",
-                text: "At RKJ, we build smart digital marketing systems that help businesses improve visibility, attract qualified leads, and grow through clear strategy."
+                kicker: "Local SEO Optimization",
+                heading:
+                    "Local search visibility built for area-based growth.",
+                text:
+                    "RKJ s. r. o. helps businesses improve local search visibility through profile direction, local keyword planning, location-based content, and clearer area-focused SEO structure."
             },
             overview: {
                 title: "Local SEO support for businesses that depend on area-based visibility.",
@@ -1303,11 +1340,15 @@ window.SITE_CONFIG = {
             method: [
                 {
                     title: "Review local presence",
-                    text: "Understand current visibility, profile clarity, and area relevance."
+                    text: "Understand current visibility, profile clarity, and area relevance.",
+                    image: "./assets/images/local-seo-method-01.jpg",
+                    alt: "Local SEO visibility planning with map search and business profile signals"
                 },
                 {
                     title: "Plan local keywords",
-                    text: "Map service and location search opportunities."
+                    text: "Map service and location search opportunities.",
+                    image: "./assets/images/local-seo-method-02.jpg",
+                    alt: "Local keyword planning and area-based search optimization workspace"
                 },
                 {
                     title: "Improve local structure",
