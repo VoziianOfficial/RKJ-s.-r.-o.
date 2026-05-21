@@ -4959,3 +4959,97 @@ width: 100%;
     border-color: rgba(255, 94, 188, 0.46) !important;
     color: #ffffff !important;
 }
+
+/* ==================================================
+   Service CTA — Background Photo Card
+   ================================================== */
+
+.service-cta {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+        linear-gradient(90deg,
+            rgba(6, 0, 18, 0.92) 0%,
+            rgba(6, 0, 18, 0.68) 48%,
+            rgba(6, 0, 18, 0.84) 100%),
+        linear-gradient(180deg,
+            rgba(6, 0, 18, 0.58) 0%,
+            rgba(6, 0, 18, 0.24) 48%,
+            rgba(6, 0, 18, 0.78) 100%),
+        radial-gradient(circle at 14% 18%, rgba(255, 94, 188, 0.22), transparent 34%),
+        radial-gradient(circle at 86% 76%, rgba(168, 85, 255, 0.18), transparent 38%),
+        url("../assets/images/service-cta-bg.jpg") center / cover no-repeat !important;
+    border-color: rgba(255, 255, 255, 0.13) !important;
+    box-shadow:
+        0 30px 90px rgba(0, 0, 0, 0.32),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+/* декоративная сетка поверх фото */
+.service-cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.016) 1px, transparent 1px);
+    background-size: 56px 56px;
+    opacity: 0.32;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 88%);
+}
+
+/* блик при наведении */
+.service-cta::after {
+    content: "";
+    position: absolute;
+    top: -130%;
+    left: -48%;
+    z-index: 2;
+    width: 34%;
+    height: 360%;
+    transform: rotate(24deg);
+    opacity: 0;
+    pointer-events: none;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.22),
+            transparent);
+    transition:
+        left 850ms ease,
+        opacity 260ms ease;
+}
+
+.service-cta:hover::after {
+    left: 120%;
+    opacity: 1;
+}
+
+.service-cta__inner {
+    position: relative;
+    z-index: 3;
+}
+
+.service-cta h2 {
+    color: #ffffff;
+    text-shadow: 0 14px 36px rgba(0, 0, 0, 0.34);
+}
+
+.service-cta p {
+    color: rgba(246, 240, 252, 0.84);
+}
+
+.service-cta {
+    background:
+        linear-gradient(90deg,
+            rgba(6, 0, 18, 0.78) 0%,
+            rgba(6, 0, 18, 0.46) 48%,
+            rgba(6, 0, 18, 0.72) 100%),
+        linear-gradient(180deg,
+            rgba(6, 0, 18, 0.42) 0%,
+            rgba(6, 0, 18, 0.18) 48%,
+            rgba(6, 0, 18, 0.64) 100%),
+        url("../assets/images/service-cta-bg.jpg") center / cover no-repeat !important;
+}
