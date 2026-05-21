@@ -3054,3 +3054,227 @@ width: 100%;
         font-size: 16.5px;
     }
 }
+
+/* ==================================================
+   Service Matters — Background Photo + Glass Panel
+   For all service pages
+   ================================================== */
+
+.service-matters.service-section {
+    position: relative;
+    overflow: hidden;
+    padding-top: clamp(54px, 6vw, 92px);
+    padding-bottom: clamp(54px, 6vw, 92px);
+    isolation: isolate;
+    background:
+        linear-gradient(90deg,
+            rgba(6, 0, 18, 0.9) 0%,
+            rgba(6, 0, 18, 0.62) 44%,
+            rgba(6, 0, 18, 0.42) 68%,
+            rgba(6, 0, 18, 0.82) 100%),
+        linear-gradient(180deg,
+            rgba(6, 0, 18, 0.82) 0%,
+            rgba(6, 0, 18, 0.36) 48%,
+            rgba(6, 0, 18, 0.9) 100%),
+        radial-gradient(circle at 18% 24%, rgba(255, 94, 188, 0.2), transparent 34%),
+        radial-gradient(circle at 82% 70%, rgba(168, 85, 255, 0.2), transparent 38%),
+        var(--service-matters-image) center / cover no-repeat;
+}
+
+.service-matters.service-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.014) 1px, transparent 1px);
+    background-size: 58px 58px;
+    opacity: 0.26;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 88%);
+}
+
+.service-matters.service-section::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    z-index: -1;
+    height: 42%;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent, rgba(6, 0, 18, 0.94));
+}
+
+.service-matters .container-wide {
+    position: relative;
+    z-index: 2;
+    width: min(100% - 32px, var(--container-wide));
+    margin-inline: auto;
+}
+
+/* Glass panel */
+
+.service-matters__panel {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(520px, 1.08fr);
+    gap: clamp(30px, 5vw, 78px);
+    align-items: center;
+    overflow: hidden;
+    padding: clamp(30px, 5vw, 68px);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: clamp(28px, 4vw, 46px);
+    background:
+        linear-gradient(135deg, rgba(6, 0, 18, 0.62), rgba(6, 0, 18, 0.32)),
+        rgba(255, 255, 255, 0.04);
+    box-shadow:
+        0 28px 88px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+.service-matters__panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 0% 0%, rgba(255, 94, 188, 0.14), transparent 34%),
+        radial-gradient(circle at 100% 100%, rgba(168, 85, 255, 0.12), transparent 38%);
+}
+
+.service-matters__content,
+.service-matters__points {
+    position: relative;
+    z-index: 2;
+}
+
+/* Left content */
+
+.service-matters__content {
+    max-width: 680px;
+}
+
+.service-matters__content h2 {
+    max-width: 680px;
+    color: #ffffff;
+    font-size: clamp(34px, 4.6vw, 66px);
+    line-height: 1.01;
+    letter-spacing: -0.064em;
+}
+
+.service-matters__content p {
+    max-width: 600px;
+    margin-top: 20px;
+    color: rgba(246, 240, 252, 0.82);
+    font-size: clamp(14px, 1.25vw, 17px);
+    line-height: 1.72;
+}
+
+/* Right list */
+
+.service-matters__points {
+    display: grid;
+    gap: 12px;
+}
+
+.service-matters__points li {
+    position: relative;
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 14px;
+    align-items: center;
+    min-height: 70px;
+    overflow: hidden;
+    isolation: isolate;
+    padding: 15px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.105);
+    border-radius: 20px;
+    color: rgba(246, 240, 252, 0.8);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.022)),
+        rgba(255, 255, 255, 0.028);
+    transition:
+        transform var(--transition-base),
+        color var(--transition-base),
+        border-color var(--transition-base),
+        background var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.service-matters__points li::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    opacity: 0;
+    background:
+        radial-gradient(circle at 14% 50%, rgba(255, 94, 188, 0.26), transparent 42%),
+        radial-gradient(circle at 90% 50%, rgba(255, 173, 138, 0.14), transparent 42%),
+        linear-gradient(135deg, rgba(168, 85, 255, 0.16), rgba(255, 94, 188, 0.1));
+    transition: opacity var(--transition-base);
+}
+
+.service-matters__points li::after {
+    content: "";
+    position: absolute;
+    top: -120%;
+    left: -46%;
+    z-index: -1;
+    width: 46%;
+    height: 340%;
+    transform: rotate(24deg);
+    opacity: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition:
+        left 720ms ease,
+        opacity var(--transition-base);
+}
+
+.service-matters__points li:hover {
+    transform: translateX(8px);
+    color: #ffffff;
+    border-color: rgba(255, 94, 188, 0.46);
+    background: rgba(255, 255, 255, 0.065);
+    box-shadow:
+        0 20px 54px rgba(0, 0, 0, 0.26),
+        0 0 28px rgba(255, 94, 188, 0.12);
+}
+
+.service-matters__points li:hover::before {
+    opacity: 1;
+}
+
+.service-matters__points li:hover::after {
+    left: 120%;
+    opacity: 1;
+}
+
+.service-matters__points svg {
+    position: relative;
+    z-index: 2;
+    width: 22px;
+    height: 22px;
+    color: var(--color-accent-peach);
+    transition:
+        transform var(--transition-base),
+        color var(--transition-base),
+        filter var(--transition-base);
+}
+
+.service-matters__points li:hover svg {
+    transform: scale(1.18) rotate(8deg);
+    color: var(--color-accent-pink);
+    filter:
+        drop-shadow(0 0 12px rgba(255, 94, 188, 0.72)) drop-shadow(0 0 22px rgba(255, 173, 138, 0.32));
+}
+
+.service-matters__points span {
+    position: relative;
+    z-index: 2;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.35;
+}
