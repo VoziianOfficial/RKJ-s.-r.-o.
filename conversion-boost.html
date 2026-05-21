@@ -25,47 +25,53 @@
         <div data-mobile-menu></div>
 
         <main id="main">
-            <!-- 02. Service hero with full-width background image -->
-            <section class="service-hero" aria-labelledby="service-title" data-service-hero-section
-                style="--service-hero-image: url('./assets/images/conversion-boost-hero.jpg');">
-                <div class="container service-hero__inner">
-                    <div class="service-hero__content">
-                        <span class="section-kicker" data-service-kicker>Conversion Boost</span>
-
-                        <h1 id="service-title" data-service-title>
-                            Better digital journeys built to turn traffic into action.
-                        </h1>
+        <!-- 02. Service hero with full-width background image -->
+        <section class="service-hero" aria-labelledby="service-title" data-service-hero-section
+            style="--service-hero-image: url('./assets/images/conversion-boost-hero.jpg');">
+            <div class="container-wide service-hero__inner">
+                <div class="service-hero__content">
+                    <span class="section-kicker" data-service-kicker>Conversion Boost</span>
+        
+                    <h1 id="service-title" data-service-title>
+                        Better digital journeys built to turn traffic into action.
+                    </h1>
+        
+                    <p data-service-text>
+                        RKJ s. r. o. helps businesses improve landing pages, calls-to-action, forms,
+                        messaging, and user flow so more visitors can become qualified leads.
+                    </p>
+        
+                    <div class="service-hero__actions">
+                        <a class="btn btn-primary" href="./index.html#contact">
+                            <span>Request Proposal</span>
+                            <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        </a>
+        
+                        <a class="btn btn-ghost" href="./index.html#services">
+                            <span>Explore Services</span>
+                            <i data-lucide="sparkles" aria-hidden="true"></i>
+                        </a>
                     </div>
-
-                    <aside class="service-hero__panel glass-card">
-                        <p data-service-text>
-                            RKJ s. r. o. helps businesses improve landing pages, calls-to-action, forms, messaging, and
-                            user flow so more visitors can become qualified leads.
-                        </p>
-
-                        <div class="service-hero__actions">
-                            <a class="btn btn-primary" href="./index.html#contact">
-                                <span>Request Proposal</span>
-                                <i data-lucide="arrow-right" aria-hidden="true"></i>
-                            </a>
-
-                            <a class="btn btn-ghost" href="./index.html#services">
-                                <span>Explore Services</span>
-                                <i data-lucide="sparkles" aria-hidden="true"></i>
-                            </a>
-                        </div>
-
-                        <div class="service-hero__mini" aria-label="Conversion boost focus areas">
-                            <span>CTA improvement</span>
-                            <span>Form optimization</span>
-                            <span>User flow review</span>
-                        </div>
-                    </aside>
+        
+                    <nav class="service-hero__nav" aria-label="Service page navigation">
+                        <a href="#service-overview">Overview</a>
+                        <a href="#service-focus">Focus Areas</a>
+                        <a href="#service-process">Process</a>
+                        <a href="#service-benefits">Benefits</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
+        
+                    <div class="service-hero__mini" aria-label="Conversion boost focus areas">
+                        <span>CTA improvement</span>
+                        <span>Form optimization</span>
+                        <span>User flow review</span>
+                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
             <!-- 03. Service overview -->
-            <section class="service-overview service-section section" aria-labelledby="overview-title">
+	            <section class="service-overview service-section section" id="service-overview" aria-labelledby="overview-title">
                 <div class="container">
                     <div class="service-overview__grid">
                         <div class="service-overview__content">
@@ -102,8 +108,8 @@
             </section>
 
             <!-- 04. What we manage / what we do -->
-            <section class="service-manage service-section section service-section--soft"
-                aria-labelledby="manage-title">
+	            <section class="service-manage service-section section service-section--soft" id="service-focus"
+	                aria-labelledby="manage-title">
                 <div class="container">
                     <div class="service-section__header">
                         <div>
@@ -213,7 +219,7 @@
             </section>
 
             <!-- 07. Process timeline -->
-            <section class="service-process service-section section" aria-labelledby="service-process-title">
+	            <section class="service-process service-section section" id="service-process" aria-labelledby="service-process-title">
                 <div class="container">
                     <div class="section-heading section-heading--center">
                         <span class="section-kicker">Process Timeline</span>
@@ -249,8 +255,8 @@
             </section>
 
             <!-- 08. Benefits / feature grid -->
-            <section class="service-benefits service-section section service-section--soft"
-                aria-labelledby="benefits-title">
+	            <section class="service-benefits service-section section service-section--soft" id="service-benefits"
+	                aria-labelledby="benefits-title">
                 <div class="container">
                     <div class="service-section__header">
                         <div>
@@ -319,7 +325,7 @@
             </section>
 
             <!-- 10. CTA / contact strip -->
-            <section class="service-cta-section section" aria-labelledby="service-cta-title">
+	            <section class="service-cta-section section" id="contact" aria-labelledby="service-cta-title">
                 <div class="container">
                     <div class="service-cta">
                         <div class="service-cta__inner">

@@ -186,7 +186,7 @@ window.SITE_CONFIG = {
                 "Conversion-focused strategy by RKJ s. r. o. for improving landing pages, calls-to-action, forms, messaging, user flow, and tracking direction."
         },
         "local-seo.html": {
-            title: "Local SEO | RKJ s. r. o.",
+            title: "Local SEO  | RKJ s. r. o.",
             description:
                 "Local SEO support by RKJ s. r. o. for businesses that want clearer local visibility through profile direction, local keyword planning, and location-based content structure."
         },
@@ -446,7 +446,7 @@ window.SITE_CONFIG = {
             hero: {
                 kicker: "Google Ads Management",
                 heading:
-                    "Paid campaigns built around clear targeting and measurable growth.",
+                    "Paid campaign planning, setup, tracking direction.",
                 text:
                     "RKJ s. r. o. helps businesses plan, launch, and optimize Google Ads campaigns focused on qualified traffic, budget control, and conversion improvement."
             },
@@ -762,7 +762,7 @@ window.SITE_CONFIG = {
             hero: {
                 kicker: "Social Media Marketing",
                 heading:
-                    "Social content and campaigns shaped around brand attention.",
+                    "Social media direction that helps brands communicate clearly.",
                 text:
                     "RKJ s. r. o. helps businesses plan social media content, campaign direction, creative messaging, and audience engagement strategies."
             },
@@ -1221,7 +1221,7 @@ window.SITE_CONFIG = {
 
         {
             id: "local-seo",
-            title: "Local SEO",
+            title: "Local SEO Optimization",
             shortTitle: "Local SEO",
             href: "./local-seo.html",
             icon: "map-pin",
